@@ -1,0 +1,12 @@
+# Bỏ qua các file rác của ESP-IDF và hệ thống
+build/
+dist/
+.pio/
+.vscode/
+.settings/
+.project
+.cproject
+sdkconfig
+sdkconfig.old
+dependencies.lock
+**/__pycache__/
