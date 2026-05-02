@@ -1,0 +1,13 @@
+dependencies:
+  espressif/mqtt:
+    rules:
+    - if: idf_version >=6.0.0
+    version: '*'
+  idf: '>=5.1'
+description: ESP RainMaker firmware agent Common component
+repository: git://github.com/espressif/esp-rainmaker-common.git
+repository_info:
+  commit_sha: 89df6c5edb7c77019c22ce14b48f6a56a83ae82c
+  path: .
+url: https://github.com/espressif/esp-rainmaker-common
+version: 1.8.2
