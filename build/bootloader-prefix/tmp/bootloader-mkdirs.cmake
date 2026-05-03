@@ -10,18 +10,18 @@ if(NOT EXISTS "D:/THVXL/Espressif/frameworks/esp-idf-v5.4.3/components/bootloade
   file(MAKE_DIRECTORY "D:/THVXL/Espressif/frameworks/esp-idf-v5.4.3/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "D:/HTN/esp-rainmaker-master/examples/gpio/build/bootloader"
-  "D:/HTN/esp-rainmaker-master/examples/gpio/build/bootloader-prefix"
-  "D:/HTN/esp-rainmaker-master/examples/gpio/build/bootloader-prefix/tmp"
-  "D:/HTN/esp-rainmaker-master/examples/gpio/build/bootloader-prefix/src/bootloader-stamp"
-  "D:/HTN/esp-rainmaker-master/examples/gpio/build/bootloader-prefix/src"
-  "D:/HTN/esp-rainmaker-master/examples/gpio/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/HTN/Du_an_CKi/build/bootloader"
+  "D:/HTN/Du_an_CKi/build/bootloader-prefix"
+  "D:/HTN/Du_an_CKi/build/bootloader-prefix/tmp"
+  "D:/HTN/Du_an_CKi/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/HTN/Du_an_CKi/build/bootloader-prefix/src"
+  "D:/HTN/Du_an_CKi/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/HTN/esp-rainmaker-master/examples/gpio/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "D:/HTN/Du_an_CKi/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/HTN/esp-rainmaker-master/examples/gpio/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "D:/HTN/Du_an_CKi/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

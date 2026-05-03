@@ -1,0 +1,1529 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1574
+load:0x403cc710,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cc71a
+[0;32mI (30) boot: ESP-IDF v5.4.3 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time May  3 2026 17:05:09[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 esp_secure_cert  unknown          3f 06 0000d000 00002000[0m
+[0;32mI (65) boot:  1 nvs_key          NVS keys         01 04 0000f000 00001000[0m
+[0;32mI (72) boot:  2 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (78) boot:  3 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (85) boot:  4 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (91) boot:  5 ota_0            OTA app          00 10 00020000 001e0000[0m
+[0;32mI (98) boot:  6 ota_1            OTA app          00 11 00200000 001e0000[0m
+[0;32mI (104) boot:  7 reserved         unknown          06 06 003e0000 0001a000[0m
+[0;32mI (111) boot:  8 fctry            WiFi data        01 02 003fa000 00006000[0m
+[0;32mI (117) boot: End of partition table[0m
+[0;32mI (121) boot: No factory image, trying OTA 0[0m
+[0;32mI (125) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=485c0h (296384) map[0m
+[0;32mI (180) esp_image: segment 1: paddr=000685e8 vaddr=3fc9ae00 size=03458h ( 13400) load[0m
+[0;32mI (182) esp_image: segment 2: paddr=0006ba48 vaddr=40380000 size=045d0h ( 17872) load[0m
+[0;32mI (187) esp_image: segment 3: paddr=00070020 vaddr=42000020 size=125c6ch (1203308) map[0m
+[0;32mI (383) esp_image: segment 4: paddr=00195c94 vaddr=403845d0 size=1672ch ( 91948) load[0m
+[0;32mI (400) esp_image: segment 5: paddr=001ac3c8 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (408) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (413) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (413) boot: Disabling RNG early entropy source...[0m
+[0;32mI (423) cpu_start: Unicore app[0m
+[0;32mI (431) cpu_start: Pro cpu start user code[0m
+[0;32mI (431) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (431) app_init: Application information:[0m
+[0;32mI (431) app_init: Project name:     gpio[0m
+[0;32mI (435) app_init: App version:      1.0[0m
+[0;32mI (439) app_init: Compile time:     May  3 2026 17:04:57[0m
+[0;32mI (444) app_init: ELF file SHA256:  5fee9d6b2...[0m
+[0;32mI (448) app_init: ESP-IDF:          v5.4.3[0m
+[0;32mI (452) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (456) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (460) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (463) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (470) heap_init: At 3FCA5430 len 0001ABD0 (106 KiB): RAM[0m
+[0;32mI (475) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (481) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (487) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (493) spi_flash: detected chip: generic[0m
+[0;32mI (496) spi_flash: flash io: dio[0m
+[0;33mW (499) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (509) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (515) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (522) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (542) coexist: coexist rom version 9387209[0m
+[0;32mI (543) main_task: Started on CPU0[0m
+[0;32mI (543) main_task: Calling app_main()[0m
+[0;32mI (653) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (663) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (663) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (673) pp: pp rom version: 9387209[0m
+[0;32mI (673) net80211: net80211 rom version: 9387209[0m
+[0;32mI (693) wifi:wifi driver task: 3fcaf174, prio:23, stack:6656, core=0[0m
+[0;32mI (693) wifi:wifi firmware version: e8ce6e2[0m
+[0;32mI (693) wifi:wifi certification version: v7.0[0m
+[0;32mI (693) wifi:config NVS flash: enabled[0m
+[0;32mI (693) wifi:config nano formatting: disabled[0m
+[0;32mI (703) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (703) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (713) wifi:Init management short buffer num: 32[0m
+[0;32mI (713) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (723) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (723) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (723) wifi:Init static rx buffer num: 10[0m
+[0;32mI (733) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (733) wifi_init: rx ba win: 6[0m
+[0;32mI (733) wifi_init: accept mbox: 6[0m
+[0;32mI (743) wifi_init: tcpip mbox: 32[0m
+[0;32mI (743) wifi_init: udp mbox: 6[0m
+[0;32mI (743) wifi_init: tcp mbox: 6[0m
+[0;32mI (753) wifi_init: tcp tx win: 5760[0m
+[0;32mI (753) wifi_init: tcp rx win: 5760[0m
+[0;32mI (753) wifi_init: tcp mss: 1440[0m
+[0;32mI (753) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (763) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (773) esp_rmaker_work_queue: Work Queue created.[0m
+[0;32mI (773) esp_mqtt_glue: AWS PPI: ?Platform=APN3|A0|RM|EX00|RMDev|1x0|0C4EA0738A1C[0m
+[0;32mI (773) esp_mqtt_glue: Initialising MQTT[0m
+[0;32mI (783) esp_mqtt_glue: MQTT LWT not configured[0m
+[0;32mI (783) esp_rmaker_mqtt_budget: MQTT Budgeting initialised. Default: 100, Max: 1024, Revive count: 1, Revive period: 5[0m
+[0;32mI (793) esp_rmaker_node: Node ID ----- kCi6mNNR5cqX6WqVWDW9kQ[0m
+[0;32mI (803) app_insights: Enable CONFIG_ESP_INSIGHTS_ENABLED to get Insights.[0m
+[0;32mI (803) esp_rmaker_ota_using_topics: OTA enabled with Topics[0m
+[0;32mI (813) esp_rmaker_ota: OTA state = 2[0m
+[0;32mI (813) esp_rmaker_time: Initializing SNTP. Using the SNTP server: pool.ntp.org[0m
+[0;32mI (823) esp_rmaker_core: Starting RainMaker Work Queue task[0m
+[0;32mI (833) esp_rmaker_work_queue: RainMaker Work Queue task started.[0m
+[0;32mI (833) app_main: Hieu chuan cac cam bien (Vui long khong cap tai)...[0m
+[0;32mI (843) network_prov_scheme_ble: BT memory released[0m
+[0;32mI (843) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (853) network_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (853) esp_rmaker_local: Event 7[0m
+[0;32mI (863) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (893) wifi:mode : sta (0c:4e:a0:73:8a:1c)[0m
+[0;32mI (893) wifi:enable tsf[0m
+[0;32mI (3313) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3313) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3343) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3363) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3393) wifi:state: run -> init (0x2c0)[0m
+[0;32mI (3403) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3403) app_wifi: Disconnected. Connecting to the AP again...[0m
+[0;33mW (3663) wifi:tx null, bss is null[0m
+[0;32mI (5813) app_wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (8223) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8223) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (8253) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (8273) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (8323) wifi:connected with Tú, aid = 1, channel 6, BW20, bssid = 9e:7b:60:b2:d4:8b[0m
+[0;32mI (8333) wifi:security: WPA2-PSK, phy: bgn, rssi: -39[0m
+[0;32mI (8333) wifi:pm start, type: 1[0m
+
+[0;32mI (8333) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (8343) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (8373) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (8373) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (8373) wifi:<ba-add>idx:0 (ifx:0, 9e:7b:60:b2:d4:8b), tid:0, ssn:4, winSize:64[0m
+[0;32mI (9373) esp_netif_handlers: sta ip: 10.189.5.19, mask: 255.255.255.0, gw: 10.189.5.249[0m
+[0;32mI (9373) app_network: Connected with IP Address:10.189.5.19[0m
+[0;32mI (9373) esp_rmaker_cmd_resp: Enabling Command-Response Module.[0m
+[0;32mI (9373) esp_rmaker_node: Node attribute cmd-resp created[0m
+[0;32mI (9383) esp_rmaker_param_cmd_resp: Enabling parameter command-response functionality[0m
+[0;32mI (9393) esp_rmaker_param_cmd_resp: Allocated 2048 bytes for command response buffer[0m
+[0;32mI (9393) esp_rmaker_common_cmd_resp: Registered command: cmd=1, access=7[0m
+[0;32mI (9403) esp_rmaker_param_cmd_resp: Registered standard set params command handler (id=1)[0m
+[0;32mI (9413) esp_rmaker_local: Enabling Local Control[0m
+[0;32mI (9413) esp_rmaker_local: Local Control Service Enabled[0m
+[0;32mI (9423) esp_rmaker_local: Starting ESP Local control with HTTP Transport and security version: 1[0m
+[0;32mI (9433) mdns_mem: mDNS task will be created from internal RAM[0m
+[0;32mI (9433) main_task: Returned from app_main()[0m
+[0;32mI (9443) esp_https_server: Starting server[0m
+[0;32mI (9443) esp_https_server: Server listening on port 8080[0m
+[0;32mI (9453) esp_rmaker_local: esp_local_ctrl service started with name : kCi6mNNR5cqX6WqVWDW9kQ[0m
+[0;32mI (9453) esp_mqtt_glue: Connecting to a1p72mufdu6064-ats.iot.us-east-1.amazonaws.com[0m
+[0;32mI (9463) esp_rmaker_core: Waiting for MQTT connection[0m
+[0;32mI (10573) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (11073) app_network: Secured session established![0m
+[0;32mI (11203) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (13133) esp_mqtt_glue: MQTT Connected[0m
+[0;32mI (13133) esp_rmaker_cmd_resp: Checking for pending commands.[0m
+[0;32mI (13143) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (13153) esp_rmaker_core: User node mapping done, initializing MQTT parameters.[0m
+[0;32mI (13153) esp_rmaker_param: Params MQTT Init done.[0m
+[0;32mI (13153) esp_rmaker_param: Reporting params (init): {"Relay Module":{"Relay 1":false,"Relay 2":false},"Sensor Module":{"Temperature":32.80000,"Humidity":67.00000,"Voltage":247.77812,"Current 1":6.08114,"Power 1":1506.77344,"Current 2":0.00000,"Power 2":0.00000},"Local Control":{"POP":"39eb5899","Type":1}}[0m
+[0;32mI (13183) esp_rmaker_ota_using_topics: Subscribing to: node/kCi6mNNR5cqX6WqVWDW9kQ/otaurl[0m
+[0;32mI (13443) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000,"Humidity":67.00000,"Voltage":247.77812,"Current 1":6.08114,"Power 1":1506.77344,"Current 2":0.00000,"Power 2":0.00000}}[0m
+[0;32mI (13453) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (13463) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":295.75110}}[0m
+[0;32mI (13473) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":6.15603}}[0m
+[0;32mI (13473) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (13483) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1820.65369}}[0m
+[0;32mI (13503) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1574
+load:0x403cc710,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cc71a
+[0;32mI (30) boot: ESP-IDF v5.4.3 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time May  3 2026 17:05:09[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 esp_secure_cert  unknown          3f 06 0000d000 00002000[0m
+[0;32mI (65) boot:  1 nvs_key          NVS keys         01 04 0000f000 00001000[0m
+[0;32mI (72) boot:  2 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (78) boot:  3 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (85) boot:  4 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (91) boot:  5 ota_0            OTA app          00 10 00020000 001e0000[0m
+[0;32mI (98) boot:  6 ota_1            OTA app          00 11 00200000 001e0000[0m
+[0;32mI (104) boot:  7 reserved         unknown          06 06 003e0000 0001a000[0m
+[0;32mI (111) boot:  8 fctry            WiFi data        01 02 003fa000 00006000[0m
+[0;32mI (117) boot: End of partition table[0m
+[0;32mI (121) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=485c0h (296384) map[0m
+[0;32mI (176) esp_image: segment 1: paddr=000685e8 vaddr=3fc9ae00 size=03458h ( 13400) load[0m
+[0;32mI (178) esp_image: segment 2: paddr=0006ba48 vaddr=40380000 size=045d0h ( 17872) load[0m
+[0;32mI (183) esp_image: segment 3: paddr=00070020 vaddr=42000020 size=125c6ch (1203308) map[0m
+[0;32mI (379) esp_image: segment 4: paddr=00195c94 vaddr=403845d0 size=1672ch ( 91948) load[0m
+[0;32mI (396) esp_image: segment 5: paddr=001ac3c8 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (404) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (404) boot: Disabling RNG early entropy source...[0m
+[0;32mI (414) cpu_start: Unicore app[0m
+[0;32mI (423) cpu_start: Pro cpu start user code[0m
+[0;32mI (423) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (423) app_init: Application information:[0m
+[0;32mI (423) app_init: Project name:     gpio[0m
+[0;32mI (427) app_init: App version:      1.0[0m
+[0;32mI (430) app_init: Compile time:     May  3 2026 17:04:57[0m
+[0;32mI (435) app_init: ELF file SHA256:  5fee9d6b2...[0m
+[0;32mI (440) app_init: ESP-IDF:          v5.4.3[0m
+[0;32mI (443) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (447) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (451) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (455) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (461) heap_init: At 3FCA5430 len 0001ABD0 (106 KiB): RAM[0m
+[0;32mI (466) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (473) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (479) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (485) spi_flash: detected chip: generic[0m
+[0;32mI (488) spi_flash: flash io: dio[0m
+[0;33mW (491) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (500) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (507) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (513) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (534) coexist: coexist rom version 9387209[0m
+[0;32mI (535) main_task: Started on CPU0[0m
+[0;32mI (535) main_task: Calling app_main()[0m
+[0;32mI (645) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (655) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (655) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) pp: pp rom version: 9387209[0m
+[0;32mI (665) net80211: net80211 rom version: 9387209[0m
+[0;32mI (685) wifi:wifi driver task: 3fcaf174, prio:23, stack:6656, core=0[0m
+[0;32mI (685) wifi:wifi firmware version: e8ce6e2[0m
+[0;32mI (685) wifi:wifi certification version: v7.0[0m
+[0;32mI (685) wifi:config NVS flash: enabled[0m
+[0;32mI (685) wifi:config nano formatting: disabled[0m
+[0;32mI (695) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (695) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (705) wifi:Init management short buffer num: 32[0m
+[0;32mI (705) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (715) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (715) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (715) wifi:Init static rx buffer num: 10[0m
+[0;32mI (725) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (725) wifi_init: rx ba win: 6[0m
+[0;32mI (725) wifi_init: accept mbox: 6[0m
+[0;32mI (735) wifi_init: tcpip mbox: 32[0m
+[0;32mI (735) wifi_init: udp mbox: 6[0m
+[0;32mI (735) wifi_init: tcp mbox: 6[0m
+[0;32mI (745) wifi_init: tcp tx win: 5760[0m
+[0;32mI (745) wifi_init: tcp rx win: 5760[0m
+[0;32mI (745) wifi_init: tcp mss: 1440[0m
+[0;32mI (745) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (755) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (765) esp_rmaker_work_queue: Work Queue created.[0m
+[0;32mI (765) esp_mqtt_glue: AWS PPI: ?Platform=APN3|A0|RM|EX00|RMDev|1x0|0C4EA0738A1C[0m
+[0;32mI (765) esp_mqtt_glue: Initialising MQTT[0m
+[0;32mI (775) esp_mqtt_glue: MQTT LWT not configured[0m
+[0;32mI (775) esp_rmaker_mqtt_budget: MQTT Budgeting initialised. Default: 100, Max: 1024, Revive count: 1, Revive period: 5[0m
+[0;32mI (785) esp_rmaker_node: Node ID ----- kCi6mNNR5cqX6WqVWDW9kQ[0m
+[0;32mI (795) app_insights: Enable CONFIG_ESP_INSIGHTS_ENABLED to get Insights.[0m
+[0;32mI (795) esp_rmaker_ota_using_topics: OTA enabled with Topics[0m
+[0;32mI (805) esp_rmaker_ota: OTA state = 2[0m
+[0;32mI (805) esp_rmaker_time: Initializing SNTP. Using the SNTP server: pool.ntp.org[0m
+[0;32mI (815) esp_rmaker_core: Starting RainMaker Work Queue task[0m
+[0;32mI (825) esp_rmaker_work_queue: RainMaker Work Queue task started.[0m
+[0;32mI (825) app_main: Hieu chuan cac cam bien (Vui long khong cap tai)...[0m
+[0;32mI (835) network_prov_scheme_ble: BT memory released[0m
+[0;32mI (835) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (845) network_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (845) esp_rmaker_local: Event 7[0m
+[0;32mI (855) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (885) wifi:mode : sta (0c:4e:a0:73:8a:1c)[0m
+[0;32mI (885) wifi:enable tsf[0m
+[0;32mI (3305) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3305) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3315) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3335) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3365) wifi:connected with Tú, aid = 1, channel 6, BW20, bssid = 9e:7b:60:b2:d4:8b[0m
+[0;32mI (3365) wifi:security: WPA2-PSK, phy: bgn, rssi: -38[0m
+[0;32mI (3375) wifi:pm start, type: 1[0m
+
+[0;32mI (3375) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3385) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (3405) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3405) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (3445) wifi:<ba-add>idx:0 (ifx:0, 9e:7b:60:b2:d4:8b), tid:0, ssn:4, winSize:64[0m
+[0;32mI (4435) esp_netif_handlers: sta ip: 10.189.5.19, mask: 255.255.255.0, gw: 10.189.5.249[0m
+[0;32mI (4435) app_network: Connected with IP Address:10.189.5.19[0m
+[0;32mI (4435) esp_rmaker_cmd_resp: Enabling Command-Response Module.[0m
+[0;32mI (4435) esp_rmaker_node: Node attribute cmd-resp created[0m
+[0;32mI (4445) esp_rmaker_param_cmd_resp: Enabling parameter command-response functionality[0m
+[0;32mI (4455) esp_rmaker_param_cmd_resp: Allocated 2048 bytes for command response buffer[0m
+[0;32mI (4455) esp_rmaker_common_cmd_resp: Registered command: cmd=1, access=7[0m
+[0;32mI (4465) esp_rmaker_param_cmd_resp: Registered standard set params command handler (id=1)[0m
+[0;32mI (4475) esp_rmaker_local: Enabling Local Control[0m
+[0;32mI (4475) esp_rmaker_local: Local Control Service Enabled[0m
+[0;32mI (4485) esp_rmaker_local: Starting ESP Local control with HTTP Transport and security version: 1[0m
+[0;32mI (4495) mdns_mem: mDNS task will be created from internal RAM[0m
+[0;32mI (4495) main_task: Returned from app_main()[0m
+[0;32mI (4505) esp_https_server: Starting server[0m
+[0;32mI (4505) esp_https_server: Server listening on port 8080[0m
+[0;32mI (4515) esp_rmaker_local: esp_local_ctrl service started with name : kCi6mNNR5cqX6WqVWDW9kQ[0m
+[0;32mI (4515) esp_mqtt_glue: Connecting to a1p72mufdu6064-ats.iot.us-east-1.amazonaws.com[0m
+[0;32mI (4525) esp_rmaker_core: Waiting for MQTT connection[0m
+[0;32mI (4725) esp_rmaker_time: SNTP Synchronised.[0m
+[0;32mI (4725) esp_rmaker_time: The current time is: Sun May  3 18:27:31 2026 +0800[CST], DST: No.[0m
+[0;32mI (5505) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (8635) esp_mqtt_glue: MQTT Connected[0m
+[0;32mI (8635) esp_rmaker_cmd_resp: Checking for pending commands.[0m
+[0;32mI (8635) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (8645) esp_rmaker_core: User node mapping done, initializing MQTT parameters.[0m
+[0;32mI (8645) esp_rmaker_param: Params MQTT Init done.[0m
+[0;32mI (8645) esp_rmaker_param: Reporting params (init): {"Relay Module":{"Relay 1":false,"Relay 2":false},"Sensor Module":{"Temperature":32.80000,"Humidity":67.00000,"Voltage":303.20889,"Current 1":5.27565,"Power 1":1599.62268,"Current 2":0.00000,"Power 2":0.00000},"Local Control":{"POP":"39eb5899","Type":1}}[0m
+[0;32mI (8675) esp_rmaker_ota_using_topics: Subscribing to: node/kCi6mNNR5cqX6WqVWDW9kQ/otaurl[0m
+[0;32mI (10325) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000,"Humidity":67.00000,"Voltage":303.20889,"Current 1":5.27565,"Power 1":1599.62268,"Current 2":0.00000,"Power 2":0.00000}}[0m
+[0;32mI (10335) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (10345) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":281.94016}}[0m
+[0;32mI (10355) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.59526}}[0m
+[0;32mI (10355) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (10365) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1295.58972}}[0m
+[0;32mI (10375) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (10485) security1: Secure session not established[0m
+[1;31mE (10485) protocomm: Decryption of response failed for endpoint esp_local_ctrl/control[0m
+[1;31mE (10485) protocomm_httpd: Data handler failed[0m
+[0;33mW (10485) httpd_uri: httpd_uri: uri handler execution failed[0m
+[0;33mW (10495) protocomm_httpd: Resetting socket session id as socket 58was closed[0m
+[0;33mW (10525) protocomm_httpd: Closing session with ID: 3677497389[0m
+[0;32mI (10785) app_network: Secured session established![0m
+[0;32mI (10885) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (13335) esp_rmaker_param: Received params: {"Relay Module":{"Relay 1":true}}[0m
+[0;32mI (13345) esp_rmaker_param: Found 1 params in write request for Relay Module[0m
+[0;32mI (13345) app_main: Relay 1 set to 1[0m
+[0;32mI (13345) esp_rmaker_param: Reporting params: {"Relay Module":{"Relay 1":true}}[0m
+[0;32mI (13525) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (13525) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (13535) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":283.96323}}[0m
+[0;32mI (13545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.86091}}[0m
+[0;32mI (13545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (13555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1380.31982}}[0m
+[0;32mI (13565) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (13685) esp_rmaker_ota_using_topics: Fetching OTA details, if any.[0m
+[0;32mI (16705) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (16715) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (16715) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":283.05365}}[0m
+[0;32mI (16725) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.47175}}[0m
+[0;32mI (16725) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (16735) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1548.79810}}[0m
+[0;32mI (16745) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (19885) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (19895) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (19895) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":283.46271}}[0m
+[0;32mI (19905) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.86239}}[0m
+[0;32mI (19905) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (19915) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1378.30762}}[0m
+[0;32mI (19925) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (21745) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (23075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (23085) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (23085) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":282.41797}}[0m
+[0;32mI (23095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.11596}}[0m
+[0;32mI (23095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (23105) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1444.83984}}[0m
+[0;32mI (23115) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (25015) esp_rmaker_param: Received params: {"Relay Module":{"Relay 2":true}}[0m
+[0;32mI (25015) esp_rmaker_param: Found 1 params in write request for Relay Module[0m
+[0;32mI (25015) app_main: Relay 2 set to 1[0m
+[0;32mI (25015) esp_rmaker_param: Reporting params: {"Relay Module":{"Relay 2":true}}[0m
+[0;32mI (26255) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (26265) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (26265) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":284.71542}}[0m
+[0;32mI (26275) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.59116}}[0m
+[0;32mI (26275) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (26285) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1307.17346}}[0m
+[0;32mI (26295) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (26445) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (29435) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (29445) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (29445) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":279.07690}}[0m
+[0;32mI (29455) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.18953}}[0m
+[0;32mI (29455) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (29465) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1448.27759}}[0m
+[0;32mI (29475) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (32615) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (32625) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (32625) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":287.48773}}[0m
+[0;32mI (32635) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.26740}}[0m
+[0;32mI (32635) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (32645) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1514.31238}}[0m
+[0;32mI (32655) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (35795) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (35805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (35805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":285.46179}}[0m
+[0;32mI (35815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.04692}}[0m
+[0;32mI (35815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (35825) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1440.70410}}[0m
+[0;32mI (35835) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (38985) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.40000}}[0m
+[0;32mI (38995) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (38995) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":282.12668}}[0m
+[0;32mI (39005) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.31900}}[0m
+[0;32mI (39005) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (39015) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1500.63184}}[0m
+[0;32mI (39025) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (42165) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (42175) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (42175) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":286.94531}}[0m
+[0;32mI (42185) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.86892}}[0m
+[0;32mI (42185) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (42195) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1397.11292}}[0m
+[0;32mI (42205) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (45345) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (45355) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (45355) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":287.65829}}[0m
+[0;32mI (45365) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.82461}}[0m
+[0;32mI (45365) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (45375) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1387.83801}}[0m
+[0;32mI (45385) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (45905) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (47135) esp_rmaker_param: Received params: {"Relay Module":{"Relay 1":false}}[0m
+[0;32mI (47135) esp_rmaker_param: Found 1 params in write request for Relay Module[0m
+[0;32mI (47135) app_main: Relay 1 set to 0[0m
+[0;32mI (47135) esp_rmaker_param: Reporting params: {"Relay Module":{"Relay 1":false}}[0m
+[0;32mI (48525) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (48535) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (48535) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":288.74088}}[0m
+[0;32mI (48545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.63984}}[0m
+[0;32mI (48545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (48555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1628.45215}}[0m
+[0;32mI (48565) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (51225) esp_rmaker_param: Received params: {"Relay Module":{"Relay 1":true}}[0m
+[0;32mI (51225) esp_rmaker_param: Found 1 params in write request for Relay Module[0m
+[0;32mI (51225) app_main: Relay 1 set to 1[0m
+[0;32mI (51235) esp_rmaker_param: Reporting params: {"Relay Module":{"Relay 1":true}}[0m
+[0;32mI (51715) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (51715) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (51725) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":288.48853}}[0m
+[0;32mI (51735) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.05474}}[0m
+[0;32mI (51735) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (51745) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1458.23364}}[0m
+[0;32mI (51755) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (54785) DHT11:: Wrong checksum[0m
+[0;32mI (54905) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":284.55069}}[0m
+[0;32mI (54915) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.91456}}[0m
+[0;32mI (54915) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (54925) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1398.44055}}[0m
+[0;32mI (54925) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (54935) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (58075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[1;31mE (58075) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (58075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":68.00000}}[0m
+[1;31mE (58085) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (58095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":283.00327}}[0m
+[1;31mE (58095) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (58105) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.20671}}[0m
+[1;31mE (58115) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (58115) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (58125) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (58135) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1473.51672}}[0m
+[1;31mE (58145) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (58145) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (58155) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (60865) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (61305) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (61315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":68.00000}}[0m
+[1;31mE (61315) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (61315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":228.83069}}[0m
+[1;31mE (61325) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (61325) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":3.49208}}[0m
+[1;31mE (61335) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (61345) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (61355) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (61355) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":799.09406}}[0m
+[1;31mE (61365) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (61375) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (61375) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (64525) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[1;31mE (64525) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (64525) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (64535) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (64545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":205.23941}}[0m
+[1;31mE (64545) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (64555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":3.06391}}[0m
+[1;31mE (64565) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (64565) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (64575) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (64585) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":628.83575}}[0m
+[1;31mE (64595) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (64595) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (64605) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (65975) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (67755) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (67765) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (67765) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (67765) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":291.29327}}[0m
+[1;31mE (67775) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (67775) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.13849}}[0m
+[1;31mE (67785) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (67795) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (67805) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (67805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1496.80688}}[0m
+[1;31mE (67815) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (67825) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (67825) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (70975) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (70985) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (70985) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (70985) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":290.49393}}[0m
+[1;31mE (70995) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (70995) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.60315}}[0m
+[1;31mE (71005) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (71015) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (71025) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (71025) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1627.68127}}[0m
+[1;31mE (71035) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (71035) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (71045) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (71055) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (74205) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[1;31mE (74205) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (74205) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (74215) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (74225) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":290.85446}}[0m
+[1;31mE (74225) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (74235) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.65815}}[0m
+[1;31mE (74245) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (74245) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (74255) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (74265) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1354.84485}}[0m
+[1;31mE (74275) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (74275) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (74285) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (76235) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (77435) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (77445) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (77445) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (77445) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":288.83328}}[0m
+[1;31mE (77455) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (77455) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.26407}}[0m
+[1;31mE (77465) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (77475) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (77485) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (77485) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1520.43774}}[0m
+[1;31mE (77495) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (77505) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (77505) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (80535) DHT11:: Wrong checksum[0m
+[0;32mI (80655) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":286.86798}}[0m
+[0;32mI (80665) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.02605}}[0m
+[1;31mE (80665) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (80665) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (80675) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (80685) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1441.81238}}[0m
+[1;31mE (80685) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (80695) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (80705) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (81285) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (83845) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[1;31mE (83845) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (83845) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (83855) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (83865) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":285.93469}}[0m
+[1;31mE (83865) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (83875) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.82953}}[0m
+[1;31mE (83885) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (83885) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (83895) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (83905) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1380.92932}}[0m
+[1;31mE (83915) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (83915) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (83925) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (86455) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (87075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (87085) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (87085) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (87085) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":286.82227}}[0m
+[1;31mE (87095) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (87095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.15569}}[0m
+[1;31mE (87105) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (87115) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (87125) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (87125) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1478.76794}}[0m
+[1;31mE (87135) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (87145) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (87145) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (90295) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (90305) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (90305) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (90305) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":282.69205}}[0m
+[1;31mE (90315) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (90315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.18100}}[0m
+[1;31mE (90325) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (90335) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (90345) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (90345) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1464.62622}}[0m
+[1;31mE (90355) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (90365) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (90365) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (93515) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[1;31mE (93515) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (93515) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (93525) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (93535) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":288.76776}}[0m
+[1;31mE (93535) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (93545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.29703}}[0m
+[1;31mE (93555) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (93555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (93565) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (93575) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1529.61243}}[0m
+[1;31mE (93585) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (93585) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (93595) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (96075) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (96745) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (96755) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (96755) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (96755) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":281.09271}}[0m
+[1;31mE (96765) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (96765) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.60478}}[0m
+[1;31mE (96775) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (96785) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (96795) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (96795) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1294.36951}}[0m
+[1;31mE (96805) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (96815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (96815) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (99965) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (99975) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (99975) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (99975) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":289.53143}}[0m
+[1;31mE (99985) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (99985) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.56119}}[0m
+[1;31mE (99995) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (100005) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (100015) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (100015) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1320.60693}}[0m
+[1;31mE (100025) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (100035) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (100035) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (103185) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[1;31mE (103185) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (103185) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":68.00000}}[0m
+[1;31mE (103195) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (103205) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":279.22150}}[0m
+[1;31mE (103205) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (103215) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.62051}}[0m
+[1;31mE (103225) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (103235) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (103235) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (103245) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1290.14636}}[0m
+[1;31mE (103255) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (103255) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (103265) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (105715) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (106415) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.40000}}[0m
+[0;32mI (106425) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":68.00000}}[0m
+[1;31mE (106425) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (106425) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":282.50925}}[0m
+[1;31mE (106435) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (106445) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.43762}}[0m
+[1;31mE (106445) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (106455) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (106465) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (106465) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1536.17798}}[0m
+[1;31mE (106475) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (106485) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (106485) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (109635) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.40000}}[0m
+[1;31mE (109635) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (109635) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":68.00000}}[0m
+[1;31mE (109645) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (109655) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":286.07309}}[0m
+[1;31mE (109655) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (109665) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.22958}}[0m
+[1;31mE (109675) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (109685) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (109685) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (109695) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1496.04077}}[0m
+[1;31mE (109705) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (109705) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (109715) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (110865) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (112865) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.60000}}[0m
+[0;32mI (112875) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":68.00000}}[0m
+[1;31mE (112875) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (112875) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":279.47546}}[0m
+[1;31mE (112885) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (112885) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.10768}}[0m
+[1;31mE (112895) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (112905) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (112915) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (112915) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1427.47131}}[0m
+[1;31mE (112925) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (112935) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (112935) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (116085) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (116095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":68.00000}}[0m
+[1;31mE (116095) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (116095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":289.63681}}[0m
+[1;31mE (116105) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (116105) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.40233}}[0m
+[1;31mE (116115) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (116125) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (116135) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (116135) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1564.71289}}[0m
+[1;31mE (116145) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (116155) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (116155) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (119305) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (119305) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (119305) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (119315) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (119325) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":286.20950}}[0m
+[1;31mE (119325) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (119335) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.21107}}[0m
+[1;31mE (119345) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (119355) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (119355) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (119365) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1491.45813}}[0m
+[1;31mE (119375) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (119375) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (119385) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (122535) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (122545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (122545) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (122545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":289.95203}}[0m
+[1;31mE (122555) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (122555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.30063}}[0m
+[1;31mE (122565) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (122575) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (122585) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (122585) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1536.92932}}[0m
+[1;31mE (122595) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (122605) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (122605) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (125755) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (125765) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (125765) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (125765) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":290.11835}}[0m
+[1;31mE (125775) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (125775) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.13739}}[0m
+[1;31mE (125785) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (125795) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (125805) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (125805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1490.45032}}[0m
+[1;31mE (125815) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (125825) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (125825) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (128975) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (128975) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (128975) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (128985) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (128995) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":286.19281}}[0m
+[1;31mE (128995) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (129005) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.59258}}[0m
+[1;31mE (129015) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (129025) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (129025) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (129035) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1314.36292}}[0m
+[1;31mE (129045) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (129045) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (129055) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (132205) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (132215) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (132215) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (132215) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":283.72601}}[0m
+[1;31mE (132225) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (132225) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.17760}}[0m
+[1;31mE (132235) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (132245) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (132255) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (132255) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1469.01953}}[0m
+[1;31mE (132265) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (132275) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (132275) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (135425) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (135435) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (135435) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (135435) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":283.92267}}[0m
+[1;31mE (135445) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (135445) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.63351}}[0m
+[1;31mE (135455) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (135465) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (135475) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (135475) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1315.55920}}[0m
+[1;31mE (135485) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (135495) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (135495) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (138645) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (138645) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (138645) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (138655) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (138665) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":285.42999}}[0m
+[1;31mE (138665) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (138675) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.96792}}[0m
+[1;31mE (138685) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (138695) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (138695) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (138705) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1417.99329}}[0m
+[1;31mE (138715) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (138715) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (138725) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (141875) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (141885) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (141885) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (141885) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":281.55255}}[0m
+[1;31mE (141895) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (141895) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.63832}}[0m
+[1;31mE (141905) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (141915) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (141925) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (141925) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1305.92969}}[0m
+[1;31mE (141935) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (141945) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (141945) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (145095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (145105) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (145105) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (145105) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":282.80167}}[0m
+[1;31mE (145115) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (145125) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.91355}}[0m
+[1;31mE (145125) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (145135) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (145145) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (145145) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1389.56018}}[0m
+[1;31mE (145155) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (145165) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (145165) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (148315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (148315) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (148315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (148325) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (148335) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":282.23227}}[0m
+[1;31mE (148335) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (148345) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.24857}}[0m
+[1;31mE (148355) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (148365) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (148365) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (148375) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1481.31580}}[0m
+[1;31mE (148385) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (148385) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (148395) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (151545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (151555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (151555) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (151555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":281.79349}}[0m
+[1;31mE (151565) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (151565) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.66702}}[0m
+[1;31mE (151575) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (151585) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (151595) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (151595) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1315.13684}}[0m
+[1;31mE (151605) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (151615) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (151615) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (154765) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (154775) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (154775) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (154775) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":293.47855}}[0m
+[1;31mE (154785) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (154795) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.03255}}[0m
+[1;31mE (154795) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (154805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (154815) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (154815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1476.94666}}[0m
+[1;31mE (154825) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (154835) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (154835) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (157985) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (157985) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (157985) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (157995) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (158005) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":285.62238}}[0m
+[1;31mE (158005) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (158015) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.86612}}[0m
+[1;31mE (158025) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (158035) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (158035) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (158045) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1389.87158}}[0m
+[1;31mE (158055) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (158055) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (158065) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (161215) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (161225) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (161225) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (161225) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":275.39316}}[0m
+[1;31mE (161235) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (161235) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":3.84385}}[0m
+[1;31mE (161245) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (161255) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (161265) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (161265) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1058.57092}}[0m
+[1;31mE (161275) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (161285) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (161285) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (164435) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (164435) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (164435) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (164445) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (164455) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":269.89233}}[0m
+[1;31mE (164455) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (164465) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":3.69515}}[0m
+[1;31mE (164475) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (164485) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (164485) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (164495) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":997.29333}}[0m
+[1;31mE (164505) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (164505) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (164515) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (167545) DHT11:: Wrong checksum[0m
+[0;32mI (167665) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":273.52521}}[0m
+[0;32mI (167675) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.20481}}[0m
+[1;31mE (167675) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (167675) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (167685) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (167695) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1150.12134}}[0m
+[1;31mE (167695) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (167705) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (167715) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (170855) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.70000}}[0m
+[0;32mI (170865) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (170865) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (170865) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":285.06738}}[0m
+[1;31mE (170875) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (170875) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.63698}}[0m
+[1;31mE (170885) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (170895) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (170905) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (170905) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1321.85254}}[0m
+[1;31mE (170915) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (170925) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (170925) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (174075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.70000}}[0m
+[1;31mE (174075) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (174075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (174085) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (174095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":283.79861}}[0m
+[1;31mE (174095) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (174105) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.61754}}[0m
+[1;31mE (174115) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (174125) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (174125) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (174135) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1310.45264}}[0m
+[1;31mE (174145) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (174145) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (174155) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (177305) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (177315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (177315) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (177315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":287.19482}}[0m
+[1;31mE (177325) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (177325) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.30691}}[0m
+[1;31mE (177335) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (177345) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (177355) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (177355) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1524.11792}}[0m
+[1;31mE (177365) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (177375) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (177375) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (180525) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (180535) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (180535) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (180535) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":285.57550}}[0m
+[1;31mE (180545) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (180545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.29651}}[0m
+[1;31mE (180555) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (180565) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (180575) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (180575) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1512.55420}}[0m
+[1;31mE (180585) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (180595) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (180595) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (183745) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (183745) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (183745) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (183755) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (183765) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":287.96115}}[0m
+[1;31mE (183765) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (183775) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.32950}}[0m
+[1;31mE (183785) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (183795) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (183795) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (183805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1534.68945}}[0m
+[1;31mE (183815) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (183815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (183825) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (186975) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (186985) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (186985) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (186985) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":286.69644}}[0m
+[1;31mE (186995) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (187005) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.72966}}[0m
+[1;31mE (187005) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (187015) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (187025) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (187025) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1355.97742}}[0m
+[1;31mE (187035) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (187045) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (187045) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (190075) DHT11:: Wrong checksum[0m
+[0;32mI (190195) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":291.80386}}[0m
+[0;32mI (190205) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.73481}}[0m
+[1;31mE (190205) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (190205) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (190215) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (190225) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1381.63599}}[0m
+[1;31mE (190225) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (190235) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (190245) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (193385) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.40000}}[0m
+[1;31mE (193385) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (193385) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (193395) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (193405) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":289.34323}}[0m
+[1;31mE (193405) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (193415) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.33157}}[0m
+[1;31mE (193425) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (193435) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (193435) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (193445) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1542.65503}}[0m
+[1;31mE (193455) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (193455) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (193465) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (196615) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.60000}}[0m
+[0;32mI (196625) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (196625) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (196625) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":287.83362}}[0m
+[1;31mE (196635) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (196635) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.71491}}[0m
+[1;31mE (196645) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (196655) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (196665) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (196665) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1357.10999}}[0m
+[1;31mE (196675) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (196685) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (196685) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (199835) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (199845) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (199845) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (199845) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":289.04922}}[0m
+[1;31mE (199855) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (199865) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.69188}}[0m
+[1;31mE (199865) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (199875) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (199885) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (199885) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1356.18555}}[0m
+[1;31mE (199895) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (199905) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (199905) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (203055) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (203055) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (203055) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (203065) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (203075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":284.46594}}[0m
+[1;31mE (203075) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (203085) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.66822}}[0m
+[1;31mE (203095) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (203105) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (203105) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (203115) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1327.94897}}[0m
+[1;31mE (203125) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (203125) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (203135) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (206285) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (206295) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (206295) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (206295) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":284.84943}}[0m
+[1;31mE (206305) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (206315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.52617}}[0m
+[1;31mE (206315) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (206325) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (206335) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (206335) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1574.12769}}[0m
+[1;31mE (206345) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (206355) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (206355) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (209505) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (209505) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (209505) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (209515) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (209525) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":288.37375}}[0m
+[1;31mE (209525) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (209535) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.61164}}[0m
+[1;31mE (209545) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (209555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (209555) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (209565) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1618.24878}}[0m
+[1;31mE (209575) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (209575) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (209585) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (212735) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (212745) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (212745) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (212745) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":291.31161}}[0m
+[1;31mE (212755) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (212755) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.93688}}[0m
+[1;31mE (212765) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (212775) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (212785) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (212785) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1438.17065}}[0m
+[1;31mE (212795) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (212805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (212805) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (215955) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (215965) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (215965) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (215965) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":281.06555}}[0m
+[1;31mE (215975) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (215975) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.71943}}[0m
+[1;31mE (215985) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (215995) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (216005) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (216005) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1326.46973}}[0m
+[1;31mE (216015) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (216025) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (216025) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (219175) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (219175) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (219175) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (219185) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (219195) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":287.28516}}[0m
+[1;31mE (219195) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (219205) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.04974}}[0m
+[1;31mE (219215) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (219225) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (219225) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (219235) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1450.71594}}[0m
+[1;31mE (219245) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (219245) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (219255) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (222285) DHT11:: Wrong checksum[0m
+[0;32mI (222405) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":283.81522}}[0m
+[0;32mI (222415) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.72817}}[0m
+[1;31mE (222415) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (222415) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (222425) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (222435) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1341.92627}}[0m
+[1;31mE (222435) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (222445) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (222455) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (225595) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (225605) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (225605) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (225605) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":291.77243}}[0m
+[1;31mE (225615) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (225625) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.14907}}[0m
+[1;31mE (225625) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (225635) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (225645) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (225645) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1502.35742}}[0m
+[1;31mE (225655) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (225665) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (225665) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (228815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (228815) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (228815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (228825) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (228835) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":283.77985}}[0m
+[1;31mE (228835) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (228845) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.69399}}[0m
+[1;31mE (228855) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (228865) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (228865) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (228875) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1332.05859}}[0m
+[1;31mE (228885) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (228885) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (228895) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (232045) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (232055) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (232055) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (232055) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":285.21310}}[0m
+[1;31mE (232065) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (232075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.52513}}[0m
+[1;31mE (232075) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (232085) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (232095) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (232095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1575.84009}}[0m
+[1;31mE (232105) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (232115) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (232115) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (232485) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (235265) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (235275) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (235275) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (235275) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":286.16199}}[0m
+[1;31mE (235285) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (235295) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.29127}}[0m
+[1;31mE (235295) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (235305) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (235315) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (235315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1514.16040}}[0m
+[1;31mE (235325) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (235335) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (235335) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (238485) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (238485) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (238485) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (238495) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (238505) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":287.21243}}[0m
+[1;31mE (238505) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (238515) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.96729}}[0m
+[1;31mE (238525) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (238535) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (238535) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (238545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1426.66797}}[0m
+[1;31mE (238555) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (238555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (238565) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (241715) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (241725) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (241725) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (241725) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":278.64386}}[0m
+[1;31mE (241735) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (241745) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.24686}}[0m
+[1;31mE (241745) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (241755) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (241765) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (241765) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1462.00488}}[0m
+[1;31mE (241775) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (241785) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (241785) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (244935) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (244945) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (244945) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (244945) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":290.25775}}[0m
+[1;31mE (244955) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (244955) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.40914}}[0m
+[1;31mE (244965) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (244975) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (244985) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (244985) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1570.04431}}[0m
+[1;31mE (244995) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (245005) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (245005) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (248035) DHT11:: Wrong checksum[0m
+[0;32mI (248155) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":283.06454}}[0m
+[1;31mE (248155) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (248155) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.89208}}[0m
+[1;31mE (248165) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (248175) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (248175) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (248185) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1384.77454}}[0m
+[1;31mE (248195) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (248205) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (248205) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (251355) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (251365) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (251365) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (251365) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":280.52805}}[0m
+[1;31mE (251375) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (251385) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.63354}}[0m
+[1;31mE (251385) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (251395) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (251405) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (251405) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1299.83728}}[0m
+[1;31mE (251415) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (251425) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (251425) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (254575) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (254575) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (254575) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (254585) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (254595) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":279.54297}}[0m
+[1;31mE (254595) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (254605) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.00764}}[0m
+[1;31mE (254615) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (254625) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (254625) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (254635) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1399.84937}}[0m
+[1;31mE (254645) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (254645) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (254655) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (257805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (257815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (257815) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (257815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":287.63696}}[0m
+[1;31mE (257825) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (257835) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.63825}}[0m
+[1;31mE (257835) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (257845) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (257855) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (257855) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1334.13293}}[0m
+[1;31mE (257865) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (257875) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (257875) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (261025) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (261035) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (261035) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (261035) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":285.01703}}[0m
+[1;31mE (261045) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (261045) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.11128}}[0m
+[1;31mE (261055) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (261065) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (261075) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (261075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1456.80188}}[0m
+[1;31mE (261085) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (261095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (261095) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (264245) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (264245) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (264245) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (264255) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (264265) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":283.31494}}[0m
+[1;31mE (264265) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (264275) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.57827}}[0m
+[1;31mE (264285) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (264295) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (264295) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (264305) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1580.40723}}[0m
+[1;31mE (264315) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (264315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (264325) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (267475) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (267485) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (267485) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (267485) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":289.26117}}[0m
+[1;31mE (267495) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (267505) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.09703}}[0m
+[1;31mE (267505) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (267515) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (267525) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (267525) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1474.37329}}[0m
+[1;31mE (267535) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (267545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (267545) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (270695) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.60000}}[0m
+[0;32mI (270705) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (270705) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (270705) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":264.76120}}[0m
+[1;31mE (270715) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (270725) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.34926}}[0m
+[1;31mE (270725) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (270735) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (270745) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (270745) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1151.51599}}[0m
+[1;31mE (270755) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (270765) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (270765) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (273915) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.40000}}[0m
+[1;31mE (273915) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (273915) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (273925) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (273935) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":271.96069}}[0m
+[1;31mE (273935) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (273945) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.22378}}[0m
+[1;31mE (273955) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (273965) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (273965) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (273975) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1148.70178}}[0m
+[1;31mE (273985) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (273985) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (273995) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (277145) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.50000}}[0m
+[0;32mI (277155) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (277155) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (277155) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":270.92517}}[0m
+[1;31mE (277165) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (277165) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":3.44436}}[0m
+[1;31mE (277175) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (277185) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (277195) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (277195) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":933.16498}}[0m
+[1;31mE (277205) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (277215) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (277215) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (280365) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.60000}}[0m
+[0;32mI (280375) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (280375) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (280375) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":276.87082}}[0m
+[1;31mE (280385) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (280395) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":3.43064}}[0m
+[1;31mE (280395) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (280405) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (280415) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (280415) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":949.84454}}[0m
+[1;31mE (280425) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (280435) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (280435) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (283585) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.70000}}[0m
+[1;31mE (283585) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (283585) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (283595) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (283605) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":277.66681}}[0m
+[1;31mE (283605) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (283615) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":3.46102}}[0m
+[1;31mE (283625) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (283635) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (283635) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (283645) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":961.01019}}[0m
+[1;31mE (283655) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (283655) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (283665) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (286815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (286825) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (286825) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (286825) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":279.32059}}[0m
+[1;31mE (286835) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (286835) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.15334}}[0m
+[1;31mE (286845) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (286855) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (286865) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (286865) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1160.11426}}[0m
+[1;31mE (286875) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (286885) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (286885) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (290035) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (290045) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (290045) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (290045) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":275.79590}}[0m
+[1;31mE (290055) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (290055) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.34824}}[0m
+[1;31mE (290065) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (290075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (290085) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (290085) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1199.22595}}[0m
+[1;31mE (290095) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (290105) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (290105) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (293255) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (293255) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (293255) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (293265) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (293275) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":269.18442}}[0m
+[1;31mE (293275) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (293285) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.30168}}[0m
+[1;31mE (293295) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (293305) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (293305) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (293315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1157.94617}}[0m
+[1;31mE (293325) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (293325) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (293335) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (296365) DHT11:: Wrong checksum[0m
+[0;32mI (296485) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":265.84460}}[0m
+[0;32mI (296495) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":3.89090}}[0m
+[1;31mE (296495) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (296495) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (296505) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (296515) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1034.37524}}[0m
+[1;31mE (296515) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (296525) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (296535) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (299675) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (299685) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (299685) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (299685) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":262.90265}}[0m
+[1;31mE (299695) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (299705) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":3.36550}}[0m
+[1;31mE (299705) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (299715) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (299725) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (299725) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":884.79974}}[0m
+[1;31mE (299735) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (299745) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (299745) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (302895) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (302895) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (302895) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (302905) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (302915) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":266.27817}}[0m
+[1;31mE (302915) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (302925) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":3.47988}}[0m
+[1;31mE (302935) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (302945) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (302945) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (302955) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":926.61530}}[0m
+[1;31mE (302965) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (302965) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (302975) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (306125) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (306135) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (306135) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (306135) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":256.27271}}[0m
+[1;31mE (306145) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (306145) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":3.92469}}[0m
+[1;31mE (306155) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (306165) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (306175) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (306175) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1005.79199}}[0m
+[1;31mE (306185) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (306195) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (306195) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (309345) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[1;31mE (309345) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (309345) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (309355) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (309365) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":269.83389}}[0m
+[1;31mE (309365) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (309375) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":3.39174}}[0m
+[1;31mE (309385) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (309395) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (309395) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (309405) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":915.20703}}[0m
+[1;31mE (309415) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (309415) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (309425) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (312575) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (312585) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (312585) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (312585) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":267.18475}}[0m
+[1;31mE (312595) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (312595) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.22844}}[0m
+[1;31mE (312605) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (312615) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (312625) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (312625) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1129.77466}}[0m
+[1;31mE (312635) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (312645) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (312645) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (315795) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (315805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (315805) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (315805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":266.54410}}[0m
+[1;31mE (315815) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (315825) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.18447}}[0m
+[1;31mE (315825) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (315835) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (315845) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (315845) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1115.34595}}[0m
+[1;31mE (315855) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (315865) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (315865) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m

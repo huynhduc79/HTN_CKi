@@ -2,12 +2,12 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
-#include "rom/ets_sys.h" // Thêm thư viện này để dùng ets_delay_us
+#include "rom/ets_sys.h" 
+#include "driver/i2c.h" // Thêm thư viện I2C gốc của ESP-IDF
 
 #define I2C_NUM I2C_NUM_0
 static uint8_t lcd_addr;
 
-// Định nghĩa các bit điều khiển
 #define PIN_RS    (1 << 0)
 #define PIN_EN    (1 << 2)
 #define BACKLIGHT (1 << 3)
@@ -23,23 +23,22 @@ static esp_err_t i2c_write_byte(uint8_t val) {
     return ret;
 }
 
-// Hàm gửi 1 Nibble (nửa byte) duy nhất - Chìa khóa để fix lỗi rác
 static void lcd_write_nibble(uint8_t nibble, uint8_t mode) {
     uint8_t data = (nibble & 0xF0) | mode | BACKLIGHT;
-    i2c_write_byte(data | PIN_EN);  // EN = 1
-    ets_delay_us(1);                // Chờ LCD nhận lệnh
-    i2c_write_byte(data & ~PIN_EN); // EN = 0
-    ets_delay_us(40);               // Chờ LCD thực thi
+    i2c_write_byte(data | PIN_EN);  
+    ets_delay_us(1);                
+    i2c_write_byte(data & ~PIN_EN); 
+    ets_delay_us(40);               
 }
 
 static void lcd_send_cmd(uint8_t cmd) {
-    lcd_write_nibble(cmd & 0xF0, 0);    // Gửi nửa cao
-    lcd_write_nibble(cmd << 4, 0);      // Gửi nửa thấp
+    lcd_write_nibble(cmd & 0xF0, 0);    
+    lcd_write_nibble(cmd << 4, 0);      
 }
 
 static void lcd_send_data(uint8_t data) {
-    lcd_write_nibble(data & 0xF0, PIN_RS); // Gửi nửa cao
-    lcd_write_nibble(data << 4, PIN_RS);   // Gửi nửa thấp
+    lcd_write_nibble(data & 0xF0, PIN_RS); 
+    lcd_write_nibble(data << 4, PIN_RS);   
 }
 
 void lcd_clear(void) {
@@ -56,24 +55,18 @@ void lcd_put_string(const char *str) {
     while (*str) lcd_send_data(*str++);
 }
 
-void lcd_init(uint8_t addr, int sda_pin, int scl_pin) {
+// --- HÀM MỚI: Chỉ đổi địa chỉ I2C đang trỏ tới ---
+void lcd_set_addr(uint8_t addr) {
+    lcd_addr = addr;
+}
+
+// --- HÀM INIT: Chỉ khởi tạo phần cứng màn hình (không cài I2C nữa) ---
+void lcd_init(uint8_t addr) {
     lcd_addr = addr;
 
-    i2c_config_t conf = {
-        .mode = I2C_MODE_MASTER,
-        .sda_io_num = sda_pin,
-        .scl_io_num = scl_pin,
-        .sda_pullup_en = GPIO_PULLUP_ENABLE,
-        .scl_pullup_en = GPIO_PULLUP_ENABLE,
-        .master.clk_speed = 100000, 
-    };
-    i2c_param_config(I2C_NUM, &conf);
-    i2c_driver_install(I2C_NUM, conf.mode, 0, 0, 0);
-
-    // QUY TRÌNH KHỞI TẠO ĐẶC BIỆT
     vTaskDelay(pdMS_TO_TICKS(50)); // Chờ nguồn ổn định
 
-    // Ép về chế độ 8-bit 3 lần (Reset sequence)
+    // Ép về chế độ 8-bit 3 lần
     lcd_write_nibble(0x30, 0); 
     vTaskDelay(pdMS_TO_TICKS(5));
     lcd_write_nibble(0x30, 0); 
@@ -81,15 +74,14 @@ void lcd_init(uint8_t addr, int sda_pin, int scl_pin) {
     lcd_write_nibble(0x30, 0); 
     vTaskDelay(pdMS_TO_TICKS(1));
 
-    // Chuyển sang chế độ 4-bit
+    // Chuyển sang 4-bit
     lcd_write_nibble(0x20, 0); 
     vTaskDelay(pdMS_TO_TICKS(1));
 
-    // Cấu hình vận hành (Sử dụng lệnh 4-bit chuẩn từ đây)
     lcd_send_cmd(0x28); // 4-bit, 2 lines, 5x8
     lcd_send_cmd(0x08); // Display OFF
     lcd_send_cmd(0x01); // Clear Display
     vTaskDelay(pdMS_TO_TICKS(2));
-    lcd_send_cmd(0x06); // Entry mode: Tự tăng con trỏ
+    lcd_send_cmd(0x06); // Tự tăng con trỏ
     lcd_send_cmd(0x0C); // Display ON, Cursor OFF
 }

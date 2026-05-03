@@ -1,0 +1,116 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1574
+load:0x403cc710,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cc71a
+[0;32mI (30) boot: ESP-IDF v5.4.3 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time May  3 2026 17:05:09[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 esp_secure_cert  unknown          3f 06 0000d000 00002000[0m
+[0;32mI (65) boot:  1 nvs_key          NVS keys         01 04 0000f000 00001000[0m
+[0;32mI (72) boot:  2 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (78) boot:  3 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (85) boot:  4 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (91) boot:  5 ota_0            OTA app          00 10 00020000 001e0000[0m
+[0;32mI (98) boot:  6 ota_1            OTA app          00 11 00200000 001e0000[0m
+[0;32mI (104) boot:  7 reserved         unknown          06 06 003e0000 0001a000[0m
+[0;32mI (111) boot:  8 fctry            WiFi data        01 02 003fa000 00006000[0m
+[0;32mI (117) boot: End of partition table[0m
+[0;32mI (121) boot: No factory image, trying OTA 0[0m
+[0;32mI (125) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=48580h (296320) map[0m
+[0;32mI (180) esp_image: segment 1: paddr=000685a8 vaddr=3fc9ae00 size=03458h ( 13400) load[0m
+[0;32mI (182) esp_image: segment 2: paddr=0006ba08 vaddr=40380000 size=04610h ( 17936) load[0m
+[0;32mI (187) esp_image: segment 3: paddr=00070020 vaddr=42000020 size=125a94h (1202836) map[0m
+[0;32mI (383) esp_image: segment 4: paddr=00195abc vaddr=40384610 size=166ech ( 91884) load[0m
+[0;32mI (400) esp_image: segment 5: paddr=001ac1b0 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (408) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (413) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (413) boot: Disabling RNG early entropy source...[0m
+[0;32mI (423) cpu_start: Unicore app[0m
+[0;32mI (431) cpu_start: Pro cpu start user code[0m
+[0;32mI (431) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (431) app_init: Application information:[0m
+[0;32mI (431) app_init: Project name:     gpio[0m
+[0;32mI (435) app_init: App version:      1.0[0m
+[0;32mI (438) app_init: Compile time:     May  3 2026 17:04:57[0m
+[0;32mI (443) app_init: ELF file SHA256:  0e4e51696...[0m
+[0;32mI (448) app_init: ESP-IDF:          v5.4.3[0m
+[0;32mI (452) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (455) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (459) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (463) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (470) heap_init: At 3FCA5420 len 0001ABE0 (106 KiB): RAM[0m
+[0;32mI (475) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (481) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (487) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (493) spi_flash: detected chip: generic[0m
+[0;32mI (496) spi_flash: flash io: dio[0m
+[0;33mW (499) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (509) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (515) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (521) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (542) coexist: coexist rom version 9387209[0m
+[0;32mI (543) main_task: Started on CPU0[0m
+[0;32mI (543) main_task: Calling app_main()[0m
+[0;32mI (643) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (653) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (653) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (663) pp: pp rom version: 9387209[0m
+[0;32mI (663) net80211: net80211 rom version: 9387209[0m
+[0;32mI (683) wifi:wifi driver task: 3fcaf164, prio:23, stack:6656, core=0[0m
+[0;32mI (683) wifi:wifi firmware version: e8ce6e2[0m
+[0;32mI (683) wifi:wifi certification version: v7.0[0m
+[0;32mI (683) wifi:config NVS flash: enabled[0m
+[0;32mI (683) wifi:config nano formatting: disabled[0m
+[0;32mI (693) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (693) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (703) wifi:Init management short buffer num: 32[0m
+[0;32mI (703) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (713) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (713) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (713) wifi:Init static rx buffer num: 10[0m
+[0;32mI (723) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (723) wifi_init: rx ba win: 6[0m
+[0;32mI (723) wifi_init: accept mbox: 6[0m
+[0;32mI (733) wifi_init: tcpip mbox: 32[0m
+[0;32mI (733) wifi_init: udp mbox: 6[0m
+[0;32mI (733) wifi_init: tcp mbox: 6[0m
+[0;32mI (743) wifi_init: tcp tx win: 5760[0m
+[0;32mI (743) wifi_init: tcp rx win: 5760[0m
+[0;32mI (743) wifi_init: tcp mss: 1440[0m
+[0;32mI (743) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (753) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (763) esp_rmaker_work_queue: Work Queue created.[0m
+[0;32mI (763) esp_mqtt_glue: AWS PPI: ?Platform=APN3|A0|RM|EX00|RMDev|1x0|0C4EA0738A1C[0m
+[0;32mI (763) esp_mqtt_glue: Initialising MQTT[0m
+[0;32mI (773) esp_mqtt_glue: MQTT LWT not configured[0m
+[0;32mI (773) esp_rmaker_mqtt_budget: MQTT Budgeting initialised. Default: 100, Max: 1024, Revive count: 1, Revive period: 5[0m
+[0;32mI (783) esp_rmaker_node: Node ID ----- o4cQDaVBYuDgayHFL9eZ6u[0m
+[0;32mI (793) app_insights: Enable CONFIG_ESP_INSIGHTS_ENABLED to get Insights.[0m
+[0;32mI (793) esp_rmaker_ota_using_topics: OTA enabled with Topics[0m
+[0;32mI (803) esp_rmaker_ota: OTA state = 2[0m
+[0;32mI (803) esp_rmaker_time: Initializing SNTP. Using the SNTP server: pool.ntp.org[0m
+[0;32mI (813) esp_rmaker_core: Starting RainMaker Work Queue task[0m
+[0;32mI (823) esp_rmaker_work_queue: RainMaker Work Queue task started.[0m
+[0;32mI (973) network_prov_scheme_ble: BT memory released[0m
+[0;32mI (973) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (973) network_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (973) esp_rmaker_local: Event 7[0m
+[0;32mI (973) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (1013) wifi:mode : sta (0c:4e:a0:73:8a:1c)[0m
+[0;32mI (1013) wifi:enable tsf[0m
+[0;32mI (3423) app_wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (5843) app_wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (8253) app_wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (10663) app_wifi: Disconnected. Connecting to the AP again...[0m

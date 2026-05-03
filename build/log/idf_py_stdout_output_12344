@@ -1,0 +1,433 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1574
+load:0x403cc710,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cc71a
+[0;32mI (30) boot: ESP-IDF v5.4.3 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time May  3 2026 17:05:09[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 esp_secure_cert  unknown          3f 06 0000d000 00002000[0m
+[0;32mI (65) boot:  1 nvs_key          NVS keys         01 04 0000f000 00001000[0m
+[0;32mI (72) boot:  2 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (78) boot:  3 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (85) boot:  4 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (91) boot:  5 ota_0            OTA app          00 10 00020000 001e0000[0m
+[0;32mI (98) boot:  6 ota_1            OTA app          00 11 00200000 001e0000[0m
+[0;32mI (104) boot:  7 reserved         unknown          06 06 003e0000 0001a000[0m
+[0;32mI (111) boot:  8 fctry            WiFi data        01 02 003fa000 00006000[0m
+[0;32mI (117) boot: End of partition table[0m
+[0;32mI (121) boot: No factory image, trying OTA 0[0m
+[0;32mI (125) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=48618h (296472) map[0m
+[0;32mI (180) esp_image: segment 1: paddr=00068640 vaddr=3fc9ae00 size=03458h ( 13400) load[0m
+[0;32mI (182) esp_image: segment 2: paddr=0006baa0 vaddr=40380000 size=04578h ( 17784) load[0m
+[0;32mI (187) esp_image: segment 3: paddr=00070020 vaddr=42000020 size=125d38h (1203512) map[0m
+[0;32mI (383) esp_image: segment 4: paddr=00195d60 vaddr=40384578 size=167c8h ( 92104) load[0m
+[0;32mI (400) esp_image: segment 5: paddr=001ac530 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (408) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (413) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (413) boot: Disabling RNG early entropy source...[0m
+[0;32mI (423) cpu_start: Unicore app[0m
+[0;32mI (431) cpu_start: Pro cpu start user code[0m
+[0;32mI (431) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (431) app_init: Application information:[0m
+[0;32mI (431) app_init: Project name:     gpio[0m
+[0;32mI (435) app_init: App version:      1.0[0m
+[0;32mI (439) app_init: Compile time:     May  3 2026 17:04:57[0m
+[0;32mI (444) app_init: ELF file SHA256:  36c688bd7...[0m
+[0;32mI (448) app_init: ESP-IDF:          v5.4.3[0m
+[0;32mI (452) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (456) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (460) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (463) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (470) heap_init: At 3FCA5430 len 0001ABD0 (106 KiB): RAM[0m
+[0;32mI (475) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (481) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (487) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (493) spi_flash: detected chip: generic[0m
+[0;32mI (496) spi_flash: flash io: dio[0m
+[0;33mW (499) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (509) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (515) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (522) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (542) coexist: coexist rom version 9387209[0m
+[0;32mI (543) main_task: Started on CPU0[0m
+[0;32mI (543) main_task: Calling app_main()[0m
+[0;32mI (543) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (543) gpio: GPIO[5]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (663) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (673) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (673) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (683) pp: pp rom version: 9387209[0m
+[0;32mI (683) net80211: net80211 rom version: 9387209[0m
+[0;32mI (703) wifi:wifi driver task: 3fcaf174, prio:23, stack:6656, core=0[0m
+[0;32mI (703) wifi:wifi firmware version: e8ce6e2[0m
+[0;32mI (703) wifi:wifi certification version: v7.0[0m
+[0;32mI (703) wifi:config NVS flash: enabled[0m
+[0;32mI (703) wifi:config nano formatting: disabled[0m
+[0;32mI (713) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (713) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (723) wifi:Init management short buffer num: 32[0m
+[0;32mI (723) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (733) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (733) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (733) wifi:Init static rx buffer num: 10[0m
+[0;32mI (743) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (743) wifi_init: rx ba win: 6[0m
+[0;32mI (743) wifi_init: accept mbox: 6[0m
+[0;32mI (753) wifi_init: tcpip mbox: 32[0m
+[0;32mI (753) wifi_init: udp mbox: 6[0m
+[0;32mI (753) wifi_init: tcp mbox: 6[0m
+[0;32mI (763) wifi_init: tcp tx win: 5760[0m
+[0;32mI (763) wifi_init: tcp rx win: 5760[0m
+[0;32mI (763) wifi_init: tcp mss: 1440[0m
+[0;32mI (763) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (773) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (783) esp_rmaker_work_queue: Work Queue created.[0m
+[0;32mI (783) esp_mqtt_glue: AWS PPI: ?Platform=APN3|A0|RM|EX00|RMDev|1x0|0C4EA0738A1C[0m
+[0;32mI (783) esp_mqtt_glue: Initialising MQTT[0m
+[0;32mI (793) esp_mqtt_glue: MQTT LWT not configured[0m
+[0;32mI (793) esp_rmaker_mqtt_budget: MQTT Budgeting initialised. Default: 100, Max: 1024, Revive count: 1, Revive period: 5[0m
+[0;32mI (803) esp_rmaker_node: Node ID ----- kCi6mNNR5cqX6WqVWDW9kQ[0m
+[0;32mI (813) app_insights: Enable CONFIG_ESP_INSIGHTS_ENABLED to get Insights.[0m
+[0;32mI (813) esp_rmaker_ota_using_topics: OTA enabled with Topics[0m
+[0;32mI (823) esp_rmaker_ota: OTA state = 2[0m
+[0;32mI (823) esp_rmaker_time: Initializing SNTP. Using the SNTP server: pool.ntp.org[0m
+[0;32mI (833) esp_rmaker_core: Starting RainMaker Work Queue task[0m
+[0;32mI (843) esp_rmaker_work_queue: RainMaker Work Queue task started.[0m
+[0;32mI (843) app_main: Hieu chuan cac cam bien (Vui long khong cap tai)...[0m
+[0;32mI (853) network_prov_scheme_ble: BT memory released[0m
+[0;32mI (853) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (863) network_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (863) esp_rmaker_local: Event 7[0m
+[0;32mI (873) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (903) wifi:mode : sta (0c:4e:a0:73:8a:1c)[0m
+[0;32mI (903) wifi:enable tsf[0m
+[0;32mI (3323) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3323) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3333) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3353) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3373) wifi:connected with Tú, aid = 1, channel 6, BW20, bssid = 9e:7b:60:b2:d4:8b[0m
+[0;32mI (3373) wifi:security: WPA2-PSK, phy: bgn, rssi: -37[0m
+[0;32mI (3373) wifi:pm start, type: 1[0m
+
+[0;32mI (3373) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3383) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (3433) wifi:<ba-add>idx:0 (ifx:0, 9e:7b:60:b2:d4:8b), tid:0, ssn:4, winSize:64[0m
+[0;32mI (3453) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3453) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[1;31mE (3923) DHT11:: Wrong checksum[0m
+[0;32mI (4423) esp_netif_handlers: sta ip: 10.189.5.19, mask: 255.255.255.0, gw: 10.189.5.249[0m
+[0;32mI (4423) app_network: Connected with IP Address:10.189.5.19[0m
+[0;32mI (4423) esp_rmaker_cmd_resp: Enabling Command-Response Module.[0m
+[0;32mI (4423) esp_rmaker_node: Node attribute cmd-resp created[0m
+[0;32mI (4433) esp_rmaker_param_cmd_resp: Enabling parameter command-response functionality[0m
+[0;32mI (4443) esp_rmaker_param_cmd_resp: Allocated 2048 bytes for command response buffer[0m
+[0;32mI (4443) esp_rmaker_common_cmd_resp: Registered command: cmd=1, access=7[0m
+[0;32mI (4453) esp_rmaker_param_cmd_resp: Registered standard set params command handler (id=1)[0m
+[0;32mI (4463) esp_rmaker_local: Enabling Local Control[0m
+[0;32mI (4463) esp_rmaker_local: Local Control Service Enabled[0m
+[0;32mI (4473) esp_rmaker_local: Starting ESP Local control with HTTP Transport and security version: 1[0m
+[0;32mI (4483) mdns_mem: mDNS task will be created from internal RAM[0m
+[0;32mI (4483) main_task: Returned from app_main()[0m
+[0;32mI (4483) esp_https_server: Starting server[0m
+[0;32mI (4493) esp_https_server: Server listening on port 8080[0m
+[0;32mI (4503) esp_rmaker_local: esp_local_ctrl service started with name : kCi6mNNR5cqX6WqVWDW9kQ[0m
+[0;32mI (4503) esp_mqtt_glue: Connecting to a1p72mufdu6064-ats.iot.us-east-1.amazonaws.com[0m
+[0;32mI (4513) esp_rmaker_core: Waiting for MQTT connection[0m
+[0;32mI (4593) esp_rmaker_time: SNTP Synchronised.[0m
+[0;32mI (4593) esp_rmaker_time: The current time is: Sun May  3 18:34:07 2026 +0800[CST], DST: No.[0m
+[0;32mI (5533) esp-x509-crt-bundle: Certificate validated[0m
+[1;31mE (7063) DHT11:: Wrong checksum[0m
+[0;32mI (8683) esp_mqtt_glue: MQTT Connected[0m
+[0;32mI (8683) esp_rmaker_cmd_resp: Checking for pending commands.[0m
+[0;32mI (8693) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (8693) esp_rmaker_core: User node mapping done, initializing MQTT parameters.[0m
+[0;32mI (8703) esp_rmaker_param: Params MQTT Init done.[0m
+[0;32mI (8703) esp_rmaker_param: Reporting params (init): {"Relay Module":{"Relay 1":false,"Relay 2":false},"Sensor Module":{"Temperature":0.00000,"Humidity":0.00000,"Voltage":264.48596,"Current 1":5.28665,"Power 1":1398.24365,"Current 2":0.00000,"Power 2":0.00000},"Local Control":{"POP":"39eb5899","Type":1}}[0m
+[0;32mI (8723) esp_rmaker_ota_using_topics: Subscribing to: node/kCi6mNNR5cqX6WqVWDW9kQ/otaurl[0m
+[0;32mI (10343) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000,"Voltage":264.48596,"Current 1":5.28665,"Power 1":1398.24365,"Current 2":0.00000,"Power 2":0.00000}}[0m
+[0;32mI (10353) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (10363) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":250.68166}}[0m
+[0;32mI (10363) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.13320}}[0m
+[0;32mI (10373) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (10383) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1286.79993}}[0m
+[0;32mI (10393) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (13533) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (13543) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (13543) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":246.13483}}[0m
+[0;32mI (13553) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.75623}}[0m
+[0;32mI (13553) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (13563) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1170.67322}}[0m
+[0;32mI (13573) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (13733) esp_rmaker_ota_using_topics: Fetching OTA details, if any.[0m
+[0;32mI (16713) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (16723) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (16723) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":241.57620}}[0m
+[0;32mI (16733) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.65436}}[0m
+[0;32mI (16733) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (16743) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1124.38196}}[0m
+[0;32mI (16753) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (19893) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (19903) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (19903) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":254.62952}}[0m
+[0;32mI (19913) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.08896}}[0m
+[0;32mI (19913) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (19923) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1295.79968}}[0m
+[0;32mI (19933) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (23083) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (23093) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (23093) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":255.50908}}[0m
+[0;32mI (23103) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.71092}}[0m
+[0;32mI (23103) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (23113) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1203.68347}}[0m
+[0;32mI (23123) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (24473) security1: Secure session not established[0m
+[1;31mE (24473) protocomm: Decryption of response failed for endpoint esp_local_ctrl/control[0m
+[1;31mE (24473) protocomm_httpd: Data handler failed[0m
+[0;33mW (24483) httpd_uri: httpd_uri: uri handler execution failed[0m
+[0;33mW (24483) protocomm_httpd: Resetting socket session id as socket 58was closed[0m
+[0;33mW (24523) protocomm_httpd: Closing session with ID: 1580618202[0m
+[0;32mI (24813) app_network: Secured session established![0m
+[0;32mI (25143) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (26263) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (26273) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (26273) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":257.99844}}[0m
+[0;32mI (26283) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.69743}}[0m
+[0;32mI (26283) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (26293) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1211.93066}}[0m
+[0;32mI (26303) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (27553) esp_rmaker_param: Received params: {"Relay Module":{"Relay 1":true}}[0m
+[0;32mI (27553) esp_rmaker_param: Found 1 params in write request for Relay Module[0m
+[0;32mI (27553) app_main: Relay 1 set to 1[0m
+[0;32mI (27563) esp_rmaker_param: Reporting params: {"Relay Module":{"Relay 1":true}}[0m
+[0;32mI (29443) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (29453) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (29453) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":241.84366}}[0m
+[0;32mI (29463) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.32452}}[0m
+[0;32mI (29463) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (29473) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1287.70142}}[0m
+[0;32mI (29483) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (32233) esp_rmaker_param: Received params: {"Relay Module":{"Relay 1":false}}[0m
+[0;32mI (32233) esp_rmaker_param: Found 1 params in write request for Relay Module[0m
+[0;32mI (32233) app_main: Relay 1 set to 0[0m
+[0;32mI (32243) esp_rmaker_param: Reporting params: {"Relay Module":{"Relay 1":false}}[0m
+[0;32mI (32623) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (32623) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (32633) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":281.53036}}[0m
+[0;32mI (32643) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.89043}}[0m
+[0;32mI (32653) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (32663) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1658.33496}}[0m
+[0;32mI (32663) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (33093) esp_rmaker_param: Received params: {"Relay Module":{"Relay 2":true}}[0m
+[0;32mI (33093) esp_rmaker_param: Found 1 params in write request for Relay Module[0m
+[0;32mI (33103) app_main: Relay 2 set to 1[0m
+[0;32mI (33103) esp_rmaker_param: Reporting params: {"Relay Module":{"Relay 2":true}}[0m
+[0;32mI (35813) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (35823) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (35823) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":275.36981}}[0m
+[0;32mI (35833) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.66369}}[0m
+[0;32mI (35833) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (35843) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1559.61011}}[0m
+[0;32mI (35853) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (38173) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (38993) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (39003) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (39003) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":283.71182}}[0m
+[0;32mI (39013) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":6.06336}}[0m
+[0;32mI (39013) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (39023) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1720.24719}}[0m
+[0;32mI (39033) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (40023) esp_rmaker_param: Received params: {"Relay Module":{"Relay 2":false}}[0m
+[0;32mI (40023) esp_rmaker_param: Found 1 params in write request for Relay Module[0m
+[0;32mI (40023) app_main: Relay 2 set to 0[0m
+[0;32mI (40033) esp_rmaker_param: Reporting params: {"Relay Module":{"Relay 2":false}}[0m
+[0;32mI (42173) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (42183) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (42183) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":274.11127}}[0m
+[0;32mI (42193) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.61710}}[0m
+[0;32mI (42193) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (42203) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1539.71094}}[0m
+[0;32mI (42213) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (45133) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (45353) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.80000}}[0m
+[0;32mI (45363) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (45363) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":280.56281}}[0m
+[0;32mI (45373) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.47678}}[0m
+[0;32mI (45373) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (45383) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1536.57983}}[0m
+[0;32mI (45393) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (45753) esp_rmaker_param: Received params: {"Relay Module":{"Relay 1":true}}[0m
+[0;32mI (45753) esp_rmaker_param: Found 1 params in write request for Relay Module[0m
+[0;32mI (45753) app_main: Relay 1 set to 1[0m
+[0;32mI (45753) esp_rmaker_param: Reporting params: {"Relay Module":{"Relay 1":true}}[0m
+[1;31mE (48413) DHT11:: Wrong checksum[0m
+[0;32mI (48533) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":281.52890}}[0m
+[0;32mI (48543) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.72009}}[0m
+[0;32mI (48543) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (48553) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1610.37170}}[0m
+[0;32mI (48553) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (51703) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (51713) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (51713) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":263.96173}}[0m
+[0;32mI (51723) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.06462}}[0m
+[0;32mI (51723) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (51733) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1336.86609}}[0m
+[0;32mI (51743) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (54183) esp_rmaker_param: Received params: {"Relay Module":{"Relay 1":false}}[0m
+[0;32mI (54183) esp_rmaker_param: Found 1 params in write request for Relay Module[0m
+[0;32mI (54183) app_main: Relay 1 set to 0[0m
+[0;32mI (54193) esp_rmaker_param: Reporting params: {"Relay Module":{"Relay 1":false}}[0m
+[0;32mI (54883) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (54893) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[0;32mI (54893) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":263.38428}}[0m
+[0;32mI (54903) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.31051}}[0m
+[0;32mI (54903) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (54913) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (54913) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1398.70447}}[0m
+[1;31mE (54923) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (54933) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (54933) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (55633) esp_rmaker_param: Received params: {"Relay Module":{"Relay 2":true}}[0m
+[0;32mI (55633) esp_rmaker_param: Found 1 params in write request for Relay Module[0m
+[0;32mI (55633) app_main: Relay 2 set to 1[0m
+[0;32mI (55633) esp_rmaker_param: Reporting params: {"Relay Module":{"Relay 2":true}}[0m
+[1;31mE (55643) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (57013) esp_rmaker_param: Received params: {"Relay Module":{"Relay 1":true}}[0m
+[0;32mI (57013) esp_rmaker_param: Found 1 params in write request for Relay Module[0m
+[0;32mI (57013) app_main: Relay 1 set to 1[0m
+[0;32mI (57023) esp_rmaker_param: Reporting params: {"Relay Module":{"Relay 1":true}}[0m
+[1;31mE (57023) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (58083) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[1;31mE (58083) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (58083) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (58093) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (58103) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":267.77664}}[0m
+[1;31mE (58103) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (58113) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.95247}}[0m
+[1;31mE (58123) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (58123) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (58133) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (58143) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1326.15527}}[0m
+[1;31mE (58153) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (58153) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (58163) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (61313) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (61323) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (61323) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (61323) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":248.71918}}[0m
+[1;31mE (61333) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (61333) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.71120}}[0m
+[1;31mE (61343) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (61353) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (61363) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (61363) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1171.76550}}[0m
+[1;31mE (61373) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (61383) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (61383) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (64533) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[1;31mE (64533) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (64533) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (64543) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (64553) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":243.11794}}[0m
+[1;31mE (64553) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (64563) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.29966}}[0m
+[1;31mE (64573) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (64573) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (64583) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (64593) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1288.44128}}[0m
+[1;31mE (64603) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (64603) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (64613) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (66703) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (67763) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (67773) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (67773) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (67773) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":253.39926}}[0m
+[1;31mE (67783) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (67783) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.31390}}[0m
+[1;31mE (67793) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (67803) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (67813) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (67813) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1346.53882}}[0m
+[1;31mE (67823) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (67833) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (67833) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (70983) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (70993) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (70993) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (70993) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":254.29329}}[0m
+[1;31mE (71003) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (71003) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.73782}}[0m
+[1;31mE (71013) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (71023) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (71033) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (71033) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1204.79504}}[0m
+[1;31mE (71043) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (71053) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (71053) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (74203) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[1;31mE (74203) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (74203) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (74213) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (74223) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":244.85719}}[0m
+[1;31mE (74223) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (74233) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.36102}}[0m
+[1;31mE (74243) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (74243) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (74253) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (74263) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1312.68506}}[0m
+[1;31mE (74273) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (74273) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (74283) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (76473) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (77433) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (77443) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (77443) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (77443) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":240.52104}}[0m
+[1;31mE (77453) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (77453) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.20221}}[0m
+[1;31mE (77463) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (77473) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (77483) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (77483) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1251.24133}}[0m
+[1;31mE (77493) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (77503) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (77503) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (80653) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[0;32mI (80663) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (80663) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (80663) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":257.03772}}[0m
+[1;31mE (80673) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (80673) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":5.04880}}[0m
+[1;31mE (80683) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (80693) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (80703) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (80703) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1297.73315}}[0m
+[1;31mE (80713) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (80723) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (80723) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (83873) esp_rmaker_param: Reporting params: {"Sensor Module":{"Temperature":32.30000}}[0m
+[1;31mE (83873) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (83873) esp_rmaker_param: Reporting params: {"Sensor Module":{"Humidity":67.00000}}[0m
+[1;31mE (83883) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (83893) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":250.13904}}[0m
+[1;31mE (83893) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (83903) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":4.70191}}[0m
+[1;31mE (83913) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (83913) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (83923) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (83933) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":1176.13245}}[0m
+[1;31mE (83943) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (83943) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (83953) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m

@@ -1,0 +1,1655 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1574
+load:0x403cc710,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cc71a
+[0;32mI (30) boot: ESP-IDF v5.4.3 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time May  3 2026 17:05:09[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 esp_secure_cert  unknown          3f 06 0000d000 00002000[0m
+[0;32mI (65) boot:  1 nvs_key          NVS keys         01 04 0000f000 00001000[0m
+[0;32mI (72) boot:  2 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (78) boot:  3 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (85) boot:  4 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (91) boot:  5 ota_0            OTA app          00 10 00020000 001e0000[0m
+[0;32mI (98) boot:  6 ota_1            OTA app          00 11 00200000 001e0000[0m
+[0;32mI (104) boot:  7 reserved         unknown          06 06 003e0000 0001a000[0m
+[0;32mI (111) boot:  8 fctry            WiFi data        01 02 003fa000 00006000[0m
+[0;32mI (117) boot: End of partition table[0m
+[0;32mI (121) boot: No factory image, trying OTA 0[0m
+[0;32mI (125) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=48618h (296472) map[0m
+[0;32mI (180) esp_image: segment 1: paddr=00068640 vaddr=3fc9ae00 size=03458h ( 13400) load[0m
+[0;32mI (182) esp_image: segment 2: paddr=0006baa0 vaddr=40380000 size=04578h ( 17784) load[0m
+[0;32mI (187) esp_image: segment 3: paddr=00070020 vaddr=42000020 size=125d38h (1203512) map[0m
+[0;32mI (383) esp_image: segment 4: paddr=00195d60 vaddr=40384578 size=167c8h ( 92104) load[0m
+[0;32mI (400) esp_image: segment 5: paddr=001ac530 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (408) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (413) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (413) boot: Disabling RNG early entropy source...[0m
+[0;32mI (423) cpu_start: Unicore app[0m
+[0;32mI (431) cpu_start: Pro cpu start user code[0m
+[0;32mI (431) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (431) app_init: Application information:[0m
+[0;32mI (431) app_init: Project name:     gpio[0m
+[0;32mI (435) app_init: App version:      1.0[0m
+[0;32mI (439) app_init: Compile time:     May  3 2026 17:04:57[0m
+[0;32mI (444) app_init: ELF file SHA256:  5ea4c495a...[0m
+[0;32mI (448) app_init: ESP-IDF:          v5.4.3[0m
+[0;32mI (452) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (456) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (460) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (463) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (470) heap_init: At 3FCA5430 len 0001ABD0 (106 KiB): RAM[0m
+[0;32mI (475) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (481) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (487) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (493) spi_flash: detected chip: generic[0m
+[0;32mI (496) spi_flash: flash io: dio[0m
+[0;33mW (499) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (509) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (515) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (522) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (542) coexist: coexist rom version 9387209[0m
+[0;32mI (543) main_task: Started on CPU0[0m
+[0;32mI (543) main_task: Calling app_main()[0m
+[0;32mI (543) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (543) gpio: GPIO[5]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (663) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (663) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (673) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (683) pp: pp rom version: 9387209[0m
+[0;32mI (683) net80211: net80211 rom version: 9387209[0m
+[0;32mI (693) wifi:wifi driver task: 3fcaf1f8, prio:23, stack:6656, core=0[0m
+[0;32mI (693) wifi:wifi firmware version: e8ce6e2[0m
+[0;32mI (703) wifi:wifi certification version: v7.0[0m
+[0;32mI (703) wifi:config NVS flash: enabled[0m
+[0;32mI (703) wifi:config nano formatting: disabled[0m
+[0;32mI (703) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (713) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (713) wifi:Init management short buffer num: 32[0m
+[0;32mI (723) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (723) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (733) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (733) wifi:Init static rx buffer num: 10[0m
+[0;32mI (733) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (743) wifi_init: rx ba win: 6[0m
+[0;32mI (743) wifi_init: accept mbox: 6[0m
+[0;32mI (743) wifi_init: tcpip mbox: 32[0m
+[0;32mI (753) wifi_init: udp mbox: 6[0m
+[0;32mI (753) wifi_init: tcp mbox: 6[0m
+[0;32mI (753) wifi_init: tcp tx win: 5760[0m
+[0;32mI (763) wifi_init: tcp rx win: 5760[0m
+[0;32mI (763) wifi_init: tcp mss: 1440[0m
+[0;32mI (763) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (763) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (773) esp_rmaker_work_queue: Work Queue created.[0m
+[0;32mI (783) esp_mqtt_glue: AWS PPI: ?Platform=APN3|A0|RM|EX00|RMDev|1x0|0C4EA0738A1C[0m
+[0;32mI (783) esp_mqtt_glue: Initialising MQTT[0m
+[0;32mI (783) esp_mqtt_glue: MQTT LWT not configured[0m
+[0;32mI (793) esp_rmaker_mqtt_budget: MQTT Budgeting initialised. Default: 100, Max: 1024, Revive count: 1, Revive period: 5[0m
+[0;32mI (803) esp_rmaker_node: Node ID ----- QR9FfDc7nexWPeRgFgQoLY[0m
+[0;32mI (803) app_insights: Enable CONFIG_ESP_INSIGHTS_ENABLED to get Insights.[0m
+[0;32mI (813) esp_rmaker_ota_using_topics: OTA enabled with Topics[0m
+[0;32mI (823) esp_rmaker_ota: OTA state = 2[0m
+[0;32mI (823) esp_rmaker_time: Initializing SNTP. Using the SNTP server: pool.ntp.org[0m
+[0;32mI (833) esp_rmaker_core: Starting RainMaker Work Queue task[0m
+[0;32mI (833) esp_rmaker_work_queue: RainMaker Work Queue task started.[0m
+[0;32mI (843) app_main: Hieu chuan cac cam bien (Vui long khong cap tai)...[0m
+[0;32mI (853) network_prov_scheme_ble: BT memory released[0m
+[0;32mI (853) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (853) network_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (863) esp_rmaker_local: Event 7[0m
+[0;32mI (863) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (903) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (943) wifi:mode : sta (0c:4e:a0:73:8a:1c)[0m
+[0;32mI (943) wifi:enable tsf[0m
+[0;32mI (3353) app_wifi: Disconnected. Connecting to the AP again...[0m
+[1;31mE (3903) DHT11:: Failed at phase 1[0m
+[1;31mE (3943) DHT11:: Failed at phase 1[0m
+[1;31mE (3983) DHT11:: Failed at phase 1[0m
+[1;31mE (4023) DHT11:: Failed at phase 1[0m
+[1;31mE (4063) DHT11:: Failed at phase 1[0m
+[1;31mE (4093) DHT11:: Failed at phase 1[0m
+[1;31mE (4133) DHT11:: Failed at phase 1[0m
+[1;31mE (4173) DHT11:: Failed at phase 1[0m
+[1;31mE (4213) DHT11:: Failed at phase 1[0m
+[1;31mE (4253) DHT11:: Failed at phase 1[0m
+[1;31mE (4293) DHT11:: Failed at phase 1[0m
+[1;31mE (4323) DHT11:: Failed at phase 1[0m
+[1;31mE (4363) DHT11:: Failed at phase 1[0m
+[1;31mE (4403) DHT11:: Failed at phase 1[0m
+[1;31mE (4443) DHT11:: Failed at phase 1[0m
+[0;32mI (5763) app_wifi: Disconnected. Connecting to the AP again...[0m
+[1;31mE (7593) DHT11:: Failed at phase 1[0m
+[1;31mE (7633) DHT11:: Failed at phase 1[0m
+[1;31mE (7673) DHT11:: Failed at phase 1[0m
+[1;31mE (7713) DHT11:: Failed at phase 1[0m
+[1;31mE (7753) DHT11:: Failed at phase 1[0m
+[1;31mE (7783) DHT11:: Failed at phase 1[0m
+[1;31mE (7823) DHT11:: Failed at phase 1[0m
+[1;31mE (7863) DHT11:: Failed at phase 1[0m
+[1;31mE (7903) DHT11:: Failed at phase 1[0m
+[1;31mE (7943) DHT11:: Failed at phase 1[0m
+[1;31mE (7983) DHT11:: Failed at phase 1[0m
+[1;31mE (8013) DHT11:: Failed at phase 1[0m
+[1;31mE (8053) DHT11:: Failed at phase 1[0m
+[1;31mE (8093) DHT11:: Failed at phase 1[0m
+[1;31mE (8133) DHT11:: Failed at phase 1[0m
+[0;32mI (8183) app_wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (10593) app_wifi: Disconnected. Connecting to the AP again...[0m
+[1;31mE (11283) DHT11:: Failed at phase 1[0m
+[1;31mE (11323) DHT11:: Failed at phase 1[0m
+[1;31mE (11363) DHT11:: Failed at phase 1[0m
+[1;31mE (11403) DHT11:: Failed at phase 1[0m
+[1;31mE (11443) DHT11:: Failed at phase 1[0m
+[1;31mE (11473) DHT11:: Failed at phase 1[0m
+[1;31mE (11513) DHT11:: Failed at phase 1[0m
+[1;31mE (11553) DHT11:: Failed at phase 1[0m
+[1;31mE (11593) DHT11:: Failed at phase 1[0m
+[1;31mE (11633) DHT11:: Failed at phase 1[0m
+[1;31mE (11673) DHT11:: Failed at phase 1[0m
+[1;31mE (11703) DHT11:: Failed at phase 1[0m
+[1;31mE (11743) DHT11:: Failed at phase 1[0m
+[1;31mE (11783) DHT11:: Failed at phase 1[0m
+[1;31mE (11823) DHT11:: Failed at phase 1[0m
+[0;32mI (13003) app_wifi: Disconnected. Connecting to the AP again...[0m
+������� udp mbox: 6
+[0;32mI (745) wifi_init: tcp mbox: 6[0m
+[0;32mI (745) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (755) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (755) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (765) esp_rmaker_work_queue: Work Queue created.[0m
+[0;32mI (775) esp_mqtt_glue: AWS PPI: ?Platform=APN3|A0|RM|EX00|RMDev|1x0|0C4EA0738A1C[0m
+[0;32mI (775) esp_mqtt_glue: Initialising MQTT[0m
+[0;32mI (775) esp_mqtt_glue: MQTT LWT not configured[0m
+[0;32mI (785) esp_rmaker_mqtt_budget: MQTT Budgeting initialised. Default: 100, Max: 1024, Revive count: 1, Revive period: 5[0m
+[0;32mI (795) esp_rmaker_node: Node ID ----- QR9FfDc7nexWPeRgFgQoLY[0m
+[0;32mI (795) app_insights: Enable CONFIG_ESP_INSIGHTS_ENABLED to get Insights.[0m
+[0;32mI (805) esp_rmaker_ota_using_topics: OTA enabled with Topics[0m
+[0;32mI (815) esp_rmaker_ota: OTA state = 2[0m
+[0;32mI (815) esp_rmaker_time: Initializing SNTP. Using the SNTP server: pool.ntp.org[0m
+[0;32mI (825) esp_rmaker_core: Starting RainMaker Work Queue task[0m
+[0;32mI (825) esp_rmaker_work_queue: RainMaker Work Queue task started.[0m
+[0;32mI (835) app_main: Hieu chuan cac cam bien (Vui long khong cap tai)...[0m
+[0;32mI (845) network_prov_scheme_ble: BT memory released[0m
+[0;32mI (845) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (845) network_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (855) esp_rmaker_local: Event 7[0m
+[0;32mI (855) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (895) wifi:mode : sta (0c:4e:a0:73:8a:1c)[0m
+[0;32mI (895) wifi:enable tsf[0m
+[0;32mI (3305) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3305) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3315) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3325) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3355) wifi:connected with Tú, aid = 1, channel 6, BW20, bssid = 56:6c:df:9d:93:ee[0m
+[0;32mI (3355) wifi:security: WPA2-PSK, phy: bgn, rssi: -43[0m
+[0;32mI (3355) wifi:pm start, type: 1[0m
+
+[0;32mI (3355) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3365) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (3395) wifi:<ba-add>idx:0 (ifx:0, 56:6c:df:9d:93:ee), tid:0, ssn:4, winSize:64[0m
+[0;32mI (3395) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3405) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[1;31mE (3895) DHT11:: Failed at phase 1[0m
+[1;31mE (3935) DHT11:: Failed at phase 1[0m
+[1;31mE (3975) DHT11:: Failed at phase 1[0m
+[1;31mE (4015) DHT11:: Failed at phase 1[0m
+[1;31mE (4055) DHT11:: Failed at phase 1[0m
+[1;31mE (4085) DHT11:: Failed at phase 1[0m
+[1;31mE (4125) DHT11:: Failed at phase 1[0m
+[1;31mE (4165) DHT11:: Failed at phase 1[0m
+[1;31mE (4205) DHT11:: Failed at phase 1[0m
+[1;31mE (4245) DHT11:: Failed at phase 1[0m
+[1;31mE (4285) DHT11:: Failed at phase 1[0m
+[1;31mE (4315) DHT11:: Failed at phase 1[0m
+[1;31mE (4355) DHT11:: Failed at phase 1[0m
+[0;32mI (4395) esp_netif_handlers: sta ip: 10.189.5.19, mask: 255.255.255.0, gw: 10.189.5.249[0m
+[0;32mI (4395) app_network: Connected with IP Address:10.189.5.19[0m
+[0;32mI (4395) esp_rmaker_cmd_resp: Enabling Command-Response Module.[0m
+[0;32mI (4395) esp_rmaker_node: Node attribute cmd-resp created[0m
+[0;32mI (4405) esp_rmaker_param_cmd_resp: Enabling parameter command-response functionality[0m
+[0;32mI (4415) esp_rmaker_param_cmd_resp: Allocated 2048 bytes for command response buffer[0m
+[0;32mI (4415) esp_rmaker_common_cmd_resp: Registered command: cmd=1, access=7[0m
+[0;32mI (4425) esp_rmaker_param_cmd_resp: Registered standard set params command handler (id=1)[0m
+[0;32mI (4435) esp_rmaker_local: Enabling Local Control[0m
+[0;32mI (4435) esp_rmaker_local: Local Control Service Enabled[0m
+[0;32mI (4445) esp_rmaker_local: Starting ESP Local control with HTTP Transport and security version: 1[0m
+[1;31mE (4405) DHT11:: Failed at phase 1[0m
+[1;31mE (4495) DHT11:: Failed at phase 1[0m
+[0;32mI (4515) mdns_mem: mDNS task will be created from internal RAM[0m
+[0;32mI (4635) main_task: Returned from app_main()[0m
+[0;32mI (4635) esp_https_server: Starting server[0m
+[0;32mI (4645) esp_https_server: Server listening on port 8080[0m
+[0;32mI (4645) esp_rmaker_local: esp_local_ctrl service started with name : QR9FfDc7nexWPeRgFgQoLY[0m
+[0;32mI (4645) esp_mqtt_glue: Connecting to a1p72mufdu6064-ats.iot.us-east-1.amazonaws.com[0m
+[0;32mI (4655) esp_rmaker_core: Waiting for MQTT connection[0m
+[0;32mI (5805) esp-x509-crt-bundle: Certificate validated[0m
+[1;31mE (7655) DHT11:: Failed at phase 1[0m
+[1;31mE (7695) DHT11:: Failed at phase 1[0m
+[1;31mE (7745) DHT11:: Failed at phase 1[0m
+[1;31mE (7785) DHT11:: Failed at phase 1[0m
+[1;31mE (7815) DHT11:: Failed at phase 1[0m
+[1;31mE (7855) DHT11:: Failed at phase 1[0m
+[1;31mE (7895) DHT11:: Failed at phase 1[0m
+[1;31mE (7945) DHT11:: Failed at phase 1[0m
+[1;31mE (7995) DHT11:: Failed at phase 1[0m
+[1;31mE (8045) DHT11:: Failed at phase 1[0m
+[1;31mE (8085) DHT11:: Failed at phase 1[0m
+[1;31mE (8115) DHT11:: Failed at phase 1[0m
+[1;31mE (8155) DHT11:: Failed at phase 1[0m
+[1;31mE (8195) DHT11:: Failed at phase 1[0m
+[1;31mE (8235) DHT11:: Failed at phase 1[0m
+[0;32mI (9135) esp_mqtt_glue: MQTT Connected[0m
+[0;32mI (9135) esp_rmaker_cmd_resp: Checking for pending commands.[0m
+[0;32mI (9145) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (9155) esp_rmaker_core: User node mapping done, initializing MQTT parameters.[0m
+[0;32mI (9155) esp_rmaker_param: Params MQTT Init done.[0m
+[0;32mI (9155) esp_rmaker_param: Reporting params (init): {"Relay Module":{"Relay 1":false,"Relay 2":false},"Sensor Module":{"Temperature":0.00000,"Humidity":0.00000,"Voltage":109.27978,"Current 1":2.07314,"Power 1":226.55229,"Current 2":0.00000,"Power 2":0.00000},"Local Control":{"POP":"2abbd816","Type":1}}[0m
+[0;32mI (9185) esp_rmaker_ota_using_topics: Subscribing to: node/QR9FfDc7nexWPeRgFgQoLY/otaurl[0m
+[1;31mE (11385) DHT11:: Failed at phase 1[0m
+[1;31mE (11425) DHT11:: Failed at phase 1[0m
+[1;31mE (11465) DHT11:: Failed at phase 1[0m
+[1;31mE (11505) DHT11:: Failed at phase 1[0m
+[1;31mE (11545) DHT11:: Failed at phase 1[0m
+[1;31mE (11575) DHT11:: Failed at phase 1[0m
+[1;31mE (11615) DHT11:: Failed at phase 1[0m
+[1;31mE (11655) DHT11:: Failed at phase 1[0m
+[1;31mE (11695) DHT11:: Failed at phase 1[0m
+[1;31mE (11735) DHT11:: Failed at phase 1[0m
+[1;31mE (11775) DHT11:: Failed at phase 1[0m
+[1;31mE (11805) DHT11:: Failed at phase 1[0m
+[1;31mE (11845) DHT11:: Failed at phase 1[0m
+[1;31mE (11885) DHT11:: Failed at phase 1[0m
+[1;31mE (11925) DHT11:: Failed at phase 1[0m
+[0;32mI (12065) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.21751,"Current 1":2.07314,"Power 1":226.55229,"Current 2":0.00000,"Power 2":0.00000}}[0m
+[0;32mI (12075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.06899}}[0m
+[0;32mI (12085) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (12095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":225.97034}}[0m
+[0;32mI (12095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (14195) esp_rmaker_ota_using_topics: Fetching OTA details, if any.[0m
+[1;31mE (15115) DHT11:: Failed at phase 2[0m
+[1;31mE (15155) DHT11:: Failed at phase 2[0m
+[1;31mE (15195) DHT11:: Failed at phase 2[0m
+[1;31mE (15235) DHT11:: Failed at phase 2[0m
+[1;31mE (15275) DHT11:: Failed at phase 2[0m
+[1;31mE (15305) DHT11:: Failed at phase 2[0m
+[1;31mE (15345) DHT11:: Failed at phase 2[0m
+[1;31mE (15385) DHT11:: Failed at phase 2[0m
+[1;31mE (15425) DHT11:: Failed at phase 2[0m
+[1;31mE (15465) DHT11:: Failed at phase 2[0m
+[1;31mE (15505) DHT11:: Failed at phase 2[0m
+[1;31mE (15535) DHT11:: Failed at phase 2[0m
+[1;31mE (15575) DHT11:: Failed at phase 2[0m
+[1;31mE (15615) DHT11:: Failed at phase 2[0m
+[1;31mE (15655) DHT11:: Failed at phase 2[0m
+[0;32mI (15795) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.24059}}[0m
+[0;32mI (15805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.76386}}[0m
+[0;32mI (15815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (15825) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":301.92542}}[0m
+[0;32mI (15825) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (18845) DHT11:: Failed at phase 1[0m
+[1;31mE (18885) DHT11:: Failed at phase 1[0m
+[1;31mE (18925) DHT11:: Failed at phase 1[0m
+[1;31mE (18965) DHT11:: Failed at phase 1[0m
+[1;31mE (19005) DHT11:: Failed at phase 1[0m
+[1;31mE (19035) DHT11:: Failed at phase 1[0m
+[1;31mE (19075) DHT11:: Failed at phase 1[0m
+[1;31mE (19115) DHT11:: Failed at phase 1[0m
+[1;31mE (19155) DHT11:: Failed at phase 1[0m
+[1;31mE (19195) DHT11:: Failed at phase 1[0m
+[1;31mE (19235) DHT11:: Failed at phase 1[0m
+[1;31mE (19265) DHT11:: Failed at phase 1[0m
+[1;31mE (19305) DHT11:: Failed at phase 1[0m
+[1;31mE (19345) DHT11:: Failed at phase 1[0m
+[1;31mE (19385) DHT11:: Failed at phase 1[0m
+[0;32mI (19525) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":355.26846}}[0m
+[0;32mI (19535) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.07524}}[0m
+[0;32mI (19545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (19545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":737.26825}}[0m
+[0;32mI (19555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (22575) DHT11:: Failed at phase 1[0m
+[1;31mE (22615) DHT11:: Failed at phase 1[0m
+[1;31mE (22655) DHT11:: Failed at phase 1[0m
+[1;31mE (22695) DHT11:: Failed at phase 1[0m
+[1;31mE (22735) DHT11:: Failed at phase 1[0m
+[1;31mE (22765) DHT11:: Failed at phase 1[0m
+[1;31mE (22805) DHT11:: Failed at phase 1[0m
+[1;31mE (22845) DHT11:: Failed at phase 1[0m
+[1;31mE (22885) DHT11:: Failed at phase 1[0m
+[1;31mE (22925) DHT11:: Failed at phase 1[0m
+[1;31mE (22965) DHT11:: Failed at phase 1[0m
+[1;31mE (22995) DHT11:: Failed at phase 1[0m
+[1;31mE (23035) DHT11:: Failed at phase 1[0m
+[1;31mE (23075) DHT11:: Failed at phase 1[0m
+[1;31mE (23115) DHT11:: Failed at phase 1[0m
+[0;32mI (23255) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.17632}}[0m
+[0;32mI (23265) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.07308}}[0m
+[0;32mI (23275) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (23285) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":226.33116}}[0m
+[0;32mI (23285) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (26305) DHT11:: Failed at phase 1[0m
+[1;31mE (26345) DHT11:: Failed at phase 1[0m
+[1;31mE (26385) DHT11:: Failed at phase 1[0m
+[1;31mE (26425) DHT11:: Failed at phase 1[0m
+[1;31mE (26465) DHT11:: Failed at phase 1[0m
+[1;31mE (26495) DHT11:: Failed at phase 1[0m
+[1;31mE (26535) DHT11:: Failed at phase 1[0m
+[1;31mE (26575) DHT11:: Failed at phase 1[0m
+[1;31mE (26615) DHT11:: Failed at phase 1[0m
+[1;31mE (26655) DHT11:: Failed at phase 1[0m
+[1;31mE (26695) DHT11:: Failed at phase 1[0m
+[1;31mE (26725) DHT11:: Failed at phase 1[0m
+[1;31mE (26765) DHT11:: Failed at phase 1[0m
+[1;31mE (26805) DHT11:: Failed at phase 1[0m
+[1;31mE (26845) DHT11:: Failed at phase 1[0m
+[0;32mI (26985) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.38006}}[0m
+[0;32mI (26995) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.08081}}[0m
+[0;32mI (27005) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (27005) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":227.59944}}[0m
+[0;32mI (27015) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (30035) DHT11:: Failed at phase 1[0m
+[1;31mE (30075) DHT11:: Failed at phase 1[0m
+[1;31mE (30115) DHT11:: Failed at phase 1[0m
+[1;31mE (30155) DHT11:: Failed at phase 1[0m
+[1;31mE (30195) DHT11:: Failed at phase 1[0m
+[1;31mE (30225) DHT11:: Failed at phase 1[0m
+[1;31mE (30265) DHT11:: Failed at phase 1[0m
+[1;31mE (30305) DHT11:: Failed at phase 1[0m
+[1;31mE (30345) DHT11:: Failed at phase 1[0m
+[1;31mE (30385) DHT11:: Failed at phase 1[0m
+[1;31mE (30425) DHT11:: Failed at phase 1[0m
+[1;31mE (30455) DHT11:: Failed at phase 1[0m
+[1;31mE (30495) DHT11:: Failed at phase 1[0m
+[1;31mE (30535) DHT11:: Failed at phase 1[0m
+[1;31mE (30575) DHT11:: Failed at phase 1[0m
+[0;32mI (30715) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.45956}}[0m
+[0;32mI (30725) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.07312}}[0m
+[0;32mI (30735) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (30735) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":226.92273}}[0m
+[0;32mI (30745) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (33285) esp_rmaker_time: SNTP Synchronised.[0m
+[0;32mI (33285) esp_rmaker_time: The current time is: Sun May  3 20:52:32 2026 +0800[CST], DST: No.[0m
+[1;31mE (33765) DHT11:: Failed at phase 1[0m
+[1;31mE (33805) DHT11:: Failed at phase 1[0m
+[1;31mE (33845) DHT11:: Failed at phase 1[0m
+[1;31mE (33885) DHT11:: Failed at phase 1[0m
+[1;31mE (33925) DHT11:: Failed at phase 1[0m
+[1;31mE (33955) DHT11:: Failed at phase 1[0m
+[1;31mE (33995) DHT11:: Failed at phase 1[0m
+[1;31mE (34035) DHT11:: Failed at phase 1[0m
+[1;31mE (34075) DHT11:: Failed at phase 1[0m
+[1;31mE (34115) DHT11:: Failed at phase 1[0m
+[1;31mE (34155) DHT11:: Failed at phase 1[0m
+[1;31mE (34185) DHT11:: Failed at phase 1[0m
+[1;31mE (34225) DHT11:: Failed at phase 1[0m
+[1;31mE (34265) DHT11:: Failed at phase 1[0m
+[1;31mE (34305) DHT11:: Failed at phase 1[0m
+[0;32mI (34445) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.04701}}[0m
+[0;32mI (34455) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.09062}}[0m
+[0;32mI (34465) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (34465) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":227.97632}}[0m
+[0;32mI (34475) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (37485) DHT11:: Failed at phase 1[0m
+[1;31mE (37525) DHT11:: Failed at phase 1[0m
+[1;31mE (37565) DHT11:: Failed at phase 1[0m
+[1;31mE (37605) DHT11:: Failed at phase 1[0m
+[1;31mE (37645) DHT11:: Failed at phase 1[0m
+[1;31mE (37675) DHT11:: Failed at phase 1[0m
+[1;31mE (37715) DHT11:: Failed at phase 1[0m
+[1;31mE (37755) DHT11:: Failed at phase 1[0m
+[1;31mE (37795) DHT11:: Failed at phase 1[0m
+[1;31mE (37835) DHT11:: Failed at phase 1[0m
+[1;31mE (37875) DHT11:: Failed at phase 1[0m
+[1;31mE (37905) DHT11:: Failed at phase 1[0m
+[1;31mE (37945) DHT11:: Failed at phase 1[0m
+[1;31mE (37985) DHT11:: Failed at phase 1[0m
+[1;31mE (38025) DHT11:: Failed at phase 1[0m
+[0;32mI (38165) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.89902}}[0m
+[0;32mI (38175) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.08149}}[0m
+[0;32mI (38185) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (38185) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":228.75354}}[0m
+[0;32mI (38195) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (379) esp_image: segment 4: paddr=00195d60 vaddr=40384578 size=167c8h ( 92104) load[0m
+[0;32mI (396) esp_image: segment 5: paddr=001ac530 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (404) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (405) boot: Disabling RNG early entropy source...[0m
+[0;32mI (414) cpu_start: Unicore app[0m
+[0;32mI (423) cpu_start: Pro cpu start user code[0m
+[0;32mI (423) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (423) app_init: Application information:[0m
+[0;32mI (423) app_init: Project name:     gpio[0m
+[0;32mI (427) app_init: App version:      1.0[0m
+[0;32mI (430) app_init: Compile time:     May  3 2026 17:04:57[0m
+[0;32mI (435) app_init: ELF file SHA256:  5ea4c495a...[0m
+[0;32mI (440) app_init: ESP-IDF:          v5.4.3[0m
+[0;32mI (443) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (447) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (451) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (455) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (461) heap_init: At 3FCA5430 len 0001ABD0 (106 KiB): RAM[0m
+[0;32mI (467) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (473) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (479) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (485) spi_flash: detected chip: generic[0m
+[0;32mI (488) spi_flash: flash io: dio[0m
+[0;33mW (491) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (501) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (507) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (513) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (534) coexist: coexist rom version 9387209[0m
+[0;32mI (535) main_task: Started on CPU0[0m
+[0;32mI (535) main_task: Calling app_main()[0m
+[0;32mI (535) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (535) gpio: GPIO[5]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (655) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (655) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) pp: pp rom version: 9387209[0m
+[0;32mI (675) net80211: net80211 rom version: 9387209[0m
+[0;32mI (685) wifi:wifi driver task: 3fcaf1f8, prio:23, stack:6656, core=0[0m
+[0;32mI (685) wifi:wifi firmware version: e8ce6e2[0m
+[0;32mI (695) wifi:wifi certification version: v7.0[0m
+[0;32mI (695) wifi:config NVS flash: enabled[0m
+[0;32mI (695) wifi:config nano formatting: disabled[0m
+[0;32mI (695) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (705) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (705) wifi:Init management short buffer num: 32[0m
+[0;32mI (715) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (715) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (725) wifi:Init static rx buffer num: 10[0m
+[0;32mI (725) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (735) wifi_init: rx ba win: 6[0m
+[0;32mI (735) wifi_init: accept mbox: 6[0m
+[0;32mI (735) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (745) wifi_init: tcp mbox: 6[0m
+[0;32mI (745) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (755) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (755) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) esp_rmaker_work_queue: Work Queue created.[0m
+[0;32mI (775) esp_mqtt_glue: AWS PPI: ?Platform=APN3|A0|RM|EX00|RMDev|1x0|0C4EA0738A1C[0m
+[0;32mI (775) esp_mqtt_glue: Initialising MQTT[0m
+[0;32mI (775) esp_mqtt_glue: MQTT LWT not configured[0m
+[0;32mI (785) esp_rmaker_mqtt_budget: MQTT Budgeting initialised. Default: 100, Max: 1024, Revive count: 1, Revive period: 5[0m
+[0;32mI (795) esp_rmaker_node: Node ID ----- QR9FfDc7nexWPeRgFgQoLY[0m
+[0;32mI (795) app_insights: Enable CONFIG_ESP_INSIGHTS_ENABLED to get Insights.[0m
+[0;32mI (805) esp_rmaker_ota_using_topics: OTA enabled with Topics[0m
+[0;32mI (815) esp_rmaker_ota: OTA state = 2[0m
+[0;32mI (815) esp_rmaker_time: Initializing SNTP. Using the SNTP server: pool.ntp.org[0m
+[0;32mI (825) esp_rmaker_core: Starting RainMaker Work Queue task[0m
+[0;32mI (825) esp_rmaker_work_queue: RainMaker Work Queue task started.[0m
+[0;32mI (835) app_main: Hieu chuan cac cam bien (Vui long khong cap tai)...[0m
+[0;32mI (845) network_prov_scheme_ble: BT memory released[0m
+[0;32mI (845) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (845) network_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (855) esp_rmaker_local: Event 7[0m
+[0;32mI (855) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (895) phy_init: Saving new calibration data due to checksum failure or outdated calibration daBJ����to adapt `driver/i2c_master.h`[0m
+[0;32mI (501) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (507) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (513) coexist: coex firmware version: b0bcc39[0m
+[0;32mI (534) coexist: coexist rom version 9387209[0m
+[0;32mI (535) main_task: Started on CPU0[0m
+[0;32mI (535) main_task: Calling app_main()[0m
+[0;32mI (535) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (535) gpio: GPIO[5]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (665) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (675) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (685) pp: pp rom version: 9387209[0m
+[0;32mI (685) net80211: net80211 rom version: 9387209[0m
+[0;32mI (695) wifi:wifi driver task: 3fcaf1f8, prio:23, stack:6656, core=0[0m
+[0;32mI (695) wifi:wifi firmware version: e8ce6e2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (705) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (735) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (745) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (755) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (765) wifi_init: tcp rx win: 5760[0m
+[0;32mI (765) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) esp_rmaker_work_queue: Work Queue created.[0m
+[0;32mI (785) esp_mqtt_glue: AWS PPI: ?Platform=APN3|A0|RM|EX00|RMDev|1x0|0C4EA0738A1C[0m
+[0;32mI (785) esp_mqtt_glue: Initialising MQTT[0m
+[0;32mI (785) esp_mqtt_glue: MQTT LWT not configured[0m
+[0;32mI (795) esp_rmaker_mqtt_budget: MQTT Budgeting initialised. Default: 100, Max: 1024, Revive count: 1, Revive period: 5[0m
+[0;32mI (805) esp_rmaker_node: Node ID ----- QR9FfDc7nexWPeRgFgQoLY[0m
+[0;32mI (805) app_insights: Enable CONFIG_ESP_INSIGHTS_ENABLED to get Insights.[0m
+[0;32mI (815) esp_rmaker_ota_using_topics: OTA enabled with Topics[0m
+[0;32mI (825) esp_rmaker_ota: OTA state = 2[0m
+[0;32mI (825) esp_rmaker_time: Initializing SNTP. Using the SNTP server: pool.ntp.org[0m
+[0;32mI (835) esp_rmaker_core: Starting RainMaker Work Queue task[0m
+[0;32mI (835) esp_rmaker_work_queue: RainMaker Work Queue task started.[0m
+[0;32mI (845) app_main: Hieu chuan cac cam bien (Vui long khong cap tai)...[0m
+[0;32mI (855) network_prov_scheme_ble: BT memory released[0m
+[0;32mI (855) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (855) network_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (865) esp_rmaker_local: Event 7[0m
+[0;32mI (865) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (905) wifi:mode : sta (0c:4e:a0:73:8a:1c)[0m
+[0;32mI (905) wifi:enable tsf[0m
+[0;32mI (3315) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3315) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3335) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3345) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3405) wifi:connected with Tú, aid = 1, channel 6, BW20, bssid = 56:6c:df:9d:93:ee[0m
+[0;32mI (3405) wifi:security: WPA2-PSK, phy: bgn, rssi: -41[0m
+[0;32mI (3405) wifi:pm start, type: 1[0m
+
+[0;32mI (3415) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3415) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (3465) wifi:<ba-add>idx:0 (ifx:0, 56:6c:df:9d:93:ee), tid:0, ssn:4, winSize:64[0m
+[0;32mI (3505) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3505) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[1;31mE (3895) DHT11:: Failed at phase 1[0m
+[1;31mE (3935) DHT11:: Failed at phase 1[0m
+[1;31mE (3975) DHT11:: Failed at phase 1[0m
+[1;31mE (4015) DHT11:: Failed at phase 1[0m
+[1;31mE (4055) DHT11:: Failed at phase 1[0m
+[1;31mE (4085) DHT11:: Failed at phase 1[0m
+[1;31mE (4125) DHT11:: Failed at phase 1[0m
+[1;31mE (4165) DHT11:: Failed at phase 1[0m
+[1;31mE (4205) DHT11:: Failed at phase 1[0m
+[1;31mE (4245) DHT11:: Failed at phase 1[0m
+[1;31mE (4285) DHT11:: Failed at phase 1[0m
+[1;31mE (4315) DHT11:: Failed at phase 1[0m
+[1;31mE (4355) DHT11:: Failed at phase 1[0m
+[1;31mE (4395) DHT11:: Failed at phase 1[0m
+[1;31mE (4435) DHT11:: Failed at phase 1[0m
+[0;32mI (4455) esp_netif_handlers: sta ip: 10.189.5.19, mask: 255.255.255.0, gw: 10.189.5.249[0m
+[0;32mI (4455) app_network: Connected with IP Address:10.189.5.19[0m
+[0;32mI (4455) esp_rmaker_cmd_resp: Enabling Command-Response Module.[0m
+[0;32mI (4455) esp_rmaker_node: Node attribute cmd-resp created[0m
+[0;32mI (4475) esp_rmaker_param_cmd_resp: Enabling parameter command-response functionality[0m
+[0;32mI (4475) esp_rmaker_param_cmd_resp: Allocated 2048 bytes for command response buffer[0m
+[0;32mI (4475) esp_rmaker_common_cmd_resp: Registered command: cmd=1, access=7[0m
+[0;32mI (4495) esp_rmaker_param_cmd_resp: Registered standard set params command handler (id=1)[0m
+[0;32mI (4495) esp_rmaker_local: Enabling Local Control[0m
+[0;32mI (4495) esp_rmaker_local: Local Control Service Enabled[0m
+[0;32mI (4515) esp_rmaker_local: Starting ESP Local control with HTTP Transport and security version: 1[0m
+[0;32mI (4545) mdns_mem: mDNS task will be created from internal RAM[0m
+[0;32mI (4595) main_task: Returned from app_main()[0m
+[0;32mI (4595) esp_https_server: Starting server[0m
+[0;32mI (4605) esp_https_server: Server listening on port 8080[0m
+[0;32mI (4605) esp_rmaker_local: esp_local_ctrl service started with name : QR9FfDc7nexWPeRgFgQoLY[0m
+[0;32mI (4615) esp_mqtt_glue: Connecting to a1p72mufdu6064-ats.iot.us-east-1.amazonaws.com[0m
+[0;32mI (4615) esp_rmaker_core: Waiting for MQTT connection[0m
+[0;32mI (4625) esp_rmaker_time: SNTP Synchronised.[0m
+[0;32mI (4625) esp_rmaker_time: The current time is: Sun May  3 20:52:45 2026 +0800[CST], DST: No.[0m
+[0;32mI (5565) esp-x509-crt-bundle: Certificate validated[0m
+[1;31mE (7605) DHT11:: Failed at phase 1[0m
+[1;31mE (7645) DHT11:: Failed at phase 1[0m
+[1;31mE (7685) DHT11:: Failed at phase 1[0m
+[1;31mE (7725) DHT11:: Failed at phase 1[0m
+[1;31mE (7765) DHT11:: Failed at phase 1[0m
+[1;31mE (7795) DHT11:: Failed at phase 1[0m
+[0;32mI (7835) esp_mqtt_glue: MQTT Connected[0m
+[0;32mI (7835) esp_rmaker_cmd_resp: Checking for pending commands.[0m
+[1;31mE (7835) DHT11:: Failed at phase 1[0m
+[0;32mI (7845) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (7855) esp_rmaker_core: User node mapping done, initializing MQTT parameters.[0m
+[0;32mI (7875) esp_rmaker_param: Params MQTT Init done.[0m
+[0;32mI (7875) esp_rmaker_param: Reporting params (init): {"Relay Module":{"Relay 1":false,"Relay 2":false},"Sensor Module":{"Temperature":0.00000,"Humidity":0.00000,"Voltage":108.93118,"Current 1":2.07303,"Power 1":225.81712,"Current 2":0.00000,"Power 2":0.00000},"Local Control":{"POP":"2abbd816","Type":1}}[0m
+[1;31mE (7885) DHT11:: Failed at phase 1[0m
+[0;32mI (7915) esp_rmaker_ota_using_topics: Subscribing to: node/QR9FfDc7nexWPeRgFgQoLY/otaurl[0m
+[1;31mE (7935) DHT11:: Failed at phase 1[0m
+[1;31mE (7975) DHT11:: Failed at phase 1[0m
+[1;31mE (8005) DHT11:: Failed at phase 1[0m
+[1;31mE (8045) DHT11:: Failed at phase 1[0m
+[1;31mE (8085) DHT11:: Failed at phase 1[0m
+[1;31mE (8125) DHT11:: Failed at phase 1[0m
+[1;31mE (8165) DHT11:: Failed at phase 1[0m
+[0;32mI (8305) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":107.07314,"Current 1":2.07303,"Power 1":225.81712,"Current 2":0.00000,"Power 2":0.00000}}[0m
+[0;32mI (8315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.42591}}[0m
+[0;32mI (8325) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (8325) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":259.75006}}[0m
+[0;32mI (8335) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (11355) DHT11:: Failed at phase 1[0m
+[1;31mE (11395) DHT11:: Failed at phase 1[0m
+[1;31mE (11435) DHT11:: Failed at phase 1[0m
+[1;31mE (11475) DHT11:: Failed at phase 1[0m
+[1;31mE (11515) DHT11:: Failed at phase 1[0m
+[1;31mE (11545) DHT11:: Failed at phase 1[0m
+[1;31mE (11585) DHT11:: Failed at phase 1[0m
+[1;31mE (11625) DHT11:: Failed at phase 1[0m
+[1;31mE (11665) DHT11:: Failed at phase 1[0m
+[1;31mE (11705) DHT11:: Failed at phase 1[0m
+[1;31mE (11745) DHT11:: Failed at phase 1[0m
+[1;31mE (11775) DHT11:: Failed at phase 1[0m
+[1;31mE (11815) DHT11:: Failed at phase 1[0m
+[1;31mE (11855) DHT11:: Failed at phase 1[0m
+[1;31mE (11895) DHT11:: Failed at phase 1[0m
+[0;32mI (12035) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.49290}}[0m
+[0;32mI (12045) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.45223}}[0m
+[0;32mI (12055) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (12055) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":268.50146}}[0m
+[0;32mI (12065) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (12915) esp_rmaker_ota_using_topics: Fetching OTA details, if any.[0m
+[0;32mI (895) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (905) wifi:mode : sta (0c:4e:a0:73:8a:1c)[0m
+[0;32mI (905) wifi:enable tsf[0m
+[0;32mI (3315) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3325) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3335) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3345) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3385) wifi:connected with Tú, aid = 1, channel 6, BW20, bssid = 56:6c:df:9d:93:ee[0m
+[0;32mI (3385) wifi:security: WPA2-PSK, phy: bgn, rssi: -42[0m
+[0;32mI (3385) wifi:pm start, type: 1[0m
+
+[0;32mI (3385) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3395) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (3405) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3415) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (3455) wifi:<ba-add>idx:0 (ifx:0, 56:6c:df:9d:93:ee), tid:0, ssn:4, winSize:64[0m
+[1;31mE (3915) DHT11:: Failed at phase 1[0m
+[1;31mE (3955) DHT11:: Failed at phase 1[0m
+[1;31mE (3995) DHT11:: Failed at phase 1[0m
+[1;31mE (4035) DHT11:: Failed at phase 1[0m
+[1;31mE (4075) DHT11:: Failed at phase 1[0m
+[1;31mE (4105) DHT11:: Failed at phase 1[0m
+[1;31mE (4145) DHT11:: Failed at phase 1[0m
+[1;31mE (4185) DHT11:: Failed at phase 1[0m
+[1;31mE (4225) DHT11:: Failed at phase 1[0m
+[1;31mE (4265) DHT11:: Failed at phase 1[0m
+[1;31mE (4305) DHT11:: Failed at phase 1[0m
+[1;31mE (4335) DHT11:: Failed at phase 1[0m
+[1;31mE (4375) DHT11:: Failed at phase 1[0m
+[1;31mE (4415) DHT11:: Failed at phase 1[0m
+[0;32mI (4455) esp_netif_handlers: sta ip: 10.189.5.19, mask: 255.255.255.0, gw: 10.189.5.249[0m
+[0;32mI (4455) app_network: Connected with IP Address:10.189.5.19[0m
+[0;32mI (4455) esp_rmaker_cmd_resp: Enabling Command-Response Module.[0m
+[0;32mI (4455) esp_rmaker_node: Node attribute cmd-resp created[0m
+[0;32mI (4465) esp_rmaker_param_cmd_resp: Enabling parameter command-response functionality[0m
+[0;32mI (4475) esp_rmaker_param_cmd_resp: Allocated 2048 bytes for command response buffer[0m
+[0;32mI (4475) esp_rmaker_common_cmd_resp: Registered command: cmd=1, access=7[0m
+[0;32mI (4485) esp_rmaker_param_cmd_resp: Registered standard set params command handler (id=1)[0m
+[0;32mI (4495) esp_rmaker_local: Enabling Local Control[0m
+[0;32mI (4495) esp_rmaker_local: Local Control Service Enabled[0m
+[0;32mI (4505) esp_rmaker_local: Starting ESP Local control with HTTP Transport and security version: 1[0m
+[1;31mE (4465) DHT11:: Failed at phase 1[0m
+[0;32mI (4575) mdns_mem: mDNS task will be created from internal RAM[0m
+[0;32mI (4615) esp_rmaker_time: SNTP Synchronised.[0m
+[0;32mI (4615) esp_rmaker_time: The current time is: Sun May  3 20:53:00 2026 +0800[CST], DST: No.[0m
+[0;32mI (4655) main_task: Returned from app_main()[0m
+[0;32mI (4655) esp_https_server: Starting server[0m
+[0;32mI (4665) esp_https_server: Server listening on port 8080[0m
+[0;32mI (4665) esp_rmaker_local: esp_local_ctrl service started with name : QR9FfDc7nexWPeRgFgQoLY[0m
+[0;32mI (4665) esp_mqtt_glue: Connecting to a1p72mufdu6064-ats.iot.us-east-1.amazonaws.com[0m
+[0;32mI (4675) esp_rmaker_core: Waiting for MQTT connection[0m
+[0;32mI (5695) esp-x509-crt-bundle: Certificate validated[0m
+[1;31mE (7665) DHT11:: Failed at phase 1[0m
+[1;31mE (7705) DHT11:: Failed at phase 1[0m
+[1;31mE (7745) DHT11:: Failed at phase 1[0m
+[1;31mE (7785) DHT11:: Failed at phase 1[0m
+[1;31mE (7825) DHT11:: Failed at phase 1[0m
+[1;31mE (7865) DHT11:: Failed at phase 1[0m
+[1;31mE (7895) DHT11:: Failed at phase 1[0m
+[1;31mE (7935) DHT11:: Failed at phase 1[0m
+[1;31mE (7975) DHT11:: Failed at phase 1[0m
+[1;31mE (8015) DHT11:: Failed at phase 1[0m
+[1;31mE (8055) DHT11:: Failed at phase 1[0m
+[1;31mE (8095) DHT11:: Failed at phase 1[0m
+[1;31mE (8125) DHT11:: Failed at phase 1[0m
+[1;31mE (8165) DHT11:: Failed at phase 1[0m
+[1;31mE (8205) DHT11:: Failed at phase 1[0m
+[0;32mI (8625) esp_mqtt_glue: MQTT Connected[0m
+[0;32mI (8625) esp_rmaker_cmd_resp: Checking for pending commands.[0m
+[0;32mI (8635) esp_rmaker_node_config: Generated Node config of length 1273[0m
+[0;32mI (8645) esp_rmaker_core: User node mapping done, initializing MQTT parameters.[0m
+[0;32mI (8645) esp_rmaker_param: Params MQTT Init done.[0m
+[0;32mI (8645) esp_rmaker_param: Reporting params (init): {"Relay Module":{"Relay 1":false,"Relay 2":false},"Sensor Module":{"Temperature":0.00000,"Humidity":0.00000,"Voltage":109.22626,"Current 1":2.44635,"Power 1":267.20590,"Current 2":0.00000,"Power 2":0.00000},"Local Control":{"POP":"2abbd816","Type":1}}[0m
+[0;32mI (8675) esp_rmaker_ota_using_topics: Subscribing to: node/QR9FfDc7nexWPeRgFgQoLY/otaurl[0m
+[1;31mE (11355) DHT11:: Failed at phase 1[0m
+[1;31mE (11395) DHT11:: Failed at phase 1[0m
+[1;31mE (11435) DHT11:: Failed at phase 1[0m
+[1;31mE (11475) DHT11:: Failed at phase 1[0m
+[1;31mE (11515) DHT11:: Failed at phase 1[0m
+[1;31mE (11545) DHT11:: Failed at phase 1[0m
+[1;31mE (11585) DHT11:: Failed at phase 1[0m
+[1;31mE (11625) DHT11:: Failed at phase 1[0m
+[1;31mE (11665) DHT11:: Failed at phase 1[0m
+[1;31mE (11705) DHT11:: Failed at phase 1[0m
+[1;31mE (11745) DHT11:: Failed at phase 1[0m
+[1;31mE (11775) DHT11:: Failed at phase 1[0m
+[1;31mE (11815) DHT11:: Failed at phase 1[0m
+[1;31mE (11855) DHT11:: Failed at phase 1[0m
+[1;31mE (11895) DHT11:: Failed at phase 1[0m
+[0;32mI (12035) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.49653,"Current 1":2.44635,"Power 1":267.20590,"Current 2":0.00000,"Power 2":0.00000}}[0m
+[0;32mI (12045) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.45523}}[0m
+[0;32mI (12055) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (12065) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":268.83929}}[0m
+[0;32mI (12065) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[0;32mI (13675) esp_rmaker_ota_using_topics: Fetching OTA details, if any.[0m
+[1;31mE (15085) DHT11:: Failed at phase 1[0m
+[1;31mE (15125) DHT11:: Failed at phase 1[0m
+[1;31mE (15165) DHT11:: Failed at phase 1[0m
+[1;31mE (15205) DHT11:: Failed at phase 1[0m
+[1;31mE (15245) DHT11:: Failed at phase 1[0m
+[1;31mE (15275) DHT11:: Failed at phase 1[0m
+[1;31mE (15315) DHT11:: Failed at phase 1[0m
+[1;31mE (15355) DHT11:: Failed at phase 1[0m
+[1;31mE (15395) DHT11:: Failed at phase 1[0m
+[1;31mE (15435) DHT11:: Failed at phase 1[0m
+[1;31mE (15475) DHT11:: Failed at phase 1[0m
+[1;31mE (15505) DHT11:: Failed at phase 1[0m
+[1;31mE (15545) DHT11:: Failed at phase 1[0m
+[1;31mE (15585) DHT11:: Failed at phase 1[0m
+[1;31mE (15625) DHT11:: Failed at phase 1[0m
+[0;32mI (15765) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":111.69187}}[0m
+[0;32mI (15775) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.45411}}[0m
+[0;32mI (15785) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (15785) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":274.10397}}[0m
+[0;32mI (15795) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (18815) DHT11:: Failed at phase 1[0m
+[1;31mE (18855) DHT11:: Failed at phase 1[0m
+[1;31mE (18895) DHT11:: Failed at phase 1[0m
+[1;31mE (18935) DHT11:: Failed at phase 1[0m
+[1;31mE (18975) DHT11:: Failed at phase 1[0m
+[1;31mE (19005) DHT11:: Failed at phase 1[0m
+[1;31mE (19045) DHT11:: Failed at phase 1[0m
+[1;31mE (19085) DHT11:: Failed at phase 1[0m
+[1;31mE (19125) DHT11:: Failed at phase 1[0m
+[1;31mE (19165) DHT11:: Failed at phase 1[0m
+[1;31mE (19205) DHT11:: Failed at phase 1[0m
+[1;31mE (19235) DHT11:: Failed at phase 1[0m
+[1;31mE (19275) DHT11:: Failed at phase 1[0m
+[1;31mE (19315) DHT11:: Failed at phase 1[0m
+[1;31mE (19355) DHT11:: Failed at phase 1[0m
+[0;32mI (19495) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.88712}}[0m
+[0;32mI (19505) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.45793}}[0m
+[0;32mI (19515) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (19515) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":270.09509}}[0m
+[0;32mI (19525) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (22545) DHT11:: Failed at phase 1[0m
+[1;31mE (22585) DHT11:: Failed at phase 1[0m
+[1;31mE (22625) DHT11:: Failed at phase 1[0m
+[1;31mE (22665) DHT11:: Failed at phase 1[0m
+[1;31mE (22705) DHT11:: Failed at phase 1[0m
+[1;31mE (22735) DHT11:: Failed at phase 1[0m
+[1;31mE (22775) DHT11:: Failed at phase 1[0m
+[1;31mE (22815) DHT11:: Failed at phase 1[0m
+[1;31mE (22855) DHT11:: Failed at phase 1[0m
+[1;31mE (22895) DHT11:: Failed at phase 1[0m
+[1;31mE (22935) DHT11:: Failed at phase 1[0m
+[1;31mE (22965) DHT11:: Failed at phase 1[0m
+[1;31mE (23005) DHT11:: Failed at phase 1[0m
+[1;31mE (23045) DHT11:: Failed at phase 1[0m
+[1;31mE (23085) DHT11:: Failed at phase 1[0m
+[0;32mI (23225) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.63033}}[0m
+[0;32mI (23235) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.44740}}[0m
+[0;32mI (23245) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (23245) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":268.30905}}[0m
+[0;32mI (23255) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (26275) DHT11:: Failed at phase 1[0m
+[1;31mE (26315) DHT11:: Failed at phase 1[0m
+[1;31mE (26355) DHT11:: Failed at phase 1[0m
+[1;31mE (26395) DHT11:: Failed at phase 1[0m
+[1;31mE (26435) DHT11:: Failed at phase 1[0m
+[1;31mE (26465) DHT11:: Failed at phase 1[0m
+[1;31mE (26505) DHT11:: Failed at phase 1[0m
+[1;31mE (26545) DHT11:: Failed at phase 1[0m
+[1;31mE (26585) DHT11:: Failed at phase 1[0m
+[1;31mE (26625) DHT11:: Failed at phase 1[0m
+[1;31mE (26665) DHT11:: Failed at phase 1[0m
+[1;31mE (26695) DHT11:: Failed at phase 1[0m
+[1;31mE (26735) DHT11:: Failed at phase 1[0m
+[1;31mE (26775) DHT11:: Failed at phase 1[0m
+[1;31mE (26815) DHT11:: Failed at phase 1[0m
+[0;32mI (26955) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.90395}}[0m
+[0;32mI (26965) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.45081}}[0m
+[0;32mI (26975) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (26975) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":269.35379}}[0m
+[0;32mI (26985) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (30005) DHT11:: Failed at phase 1[0m
+[1;31mE (30045) DHT11:: Failed at phase 1[0m
+[1;31mE (30085) DHT11:: Failed at phase 1[0m
+[1;31mE (30125) DHT11:: Failed at phase 1[0m
+[1;31mE (30165) DHT11:: Failed at phase 1[0m
+[1;31mE (30195) DHT11:: Failed at phase 1[0m
+[1;31mE (30235) DHT11:: Failed at phase 1[0m
+[1;31mE (30275) DHT11:: Failed at phase 1[0m
+[1;31mE (30315) DHT11:: Failed at phase 1[0m
+[1;31mE (30355) DHT11:: Failed at phase 1[0m
+[1;31mE (30395) DHT11:: Failed at phase 1[0m
+[1;31mE (30425) DHT11:: Failed at phase 1[0m
+[1;31mE (30465) DHT11:: Failed at phase 1[0m
+[1;31mE (30505) DHT11:: Failed at phase 1[0m
+[1;31mE (30545) DHT11:: Failed at phase 1[0m
+[0;32mI (30685) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.46061}}[0m
+[0;32mI (30695) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.45606}}[0m
+[0;32mI (30705) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (30705) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":268.84201}}[0m
+[0;32mI (30715) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (33735) DHT11:: Failed at phase 1[0m
+[1;31mE (33775) DHT11:: Failed at phase 1[0m
+[1;31mE (33815) DHT11:: Failed at phase 1[0m
+[1;31mE (33855) DHT11:: Failed at phase 1[0m
+[1;31mE (33895) DHT11:: Failed at phase 1[0m
+[1;31mE (33925) DHT11:: Failed at phase 1[0m
+[1;31mE (33965) DHT11:: Failed at phase 1[0m
+[1;31mE (34005) DHT11:: Failed at phase 1[0m
+[1;31mE (34045) DHT11:: Failed at phase 1[0m
+[1;31mE (34085) DHT11:: Failed at phase 1[0m
+[1;31mE (34125) DHT11:: Failed at phase 1[0m
+[1;31mE (34155) DHT11:: Failed at phase 1[0m
+[1;31mE (34195) DHT11:: Failed at phase 1[0m
+[1;31mE (34235) DHT11:: Failed at phase 1[0m
+[1;31mE (34275) DHT11:: Failed at phase 1[0m
+[0;32mI (34415) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.80038}}[0m
+[0;32mI (34425) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.45983}}[0m
+[0;32mI (34435) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (34435) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":270.09027}}[0m
+[0;32mI (34445) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (37465) DHT11:: Failed at phase 1[0m
+[1;31mE (37505) DHT11:: Failed at phase 1[0m
+[1;31mE (37545) DHT11:: Failed at phase 1[0m
+[1;31mE (37585) DHT11:: Failed at phase 1[0m
+[1;31mE (37625) DHT11:: Failed at phase 1[0m
+[1;31mE (37655) DHT11:: Failed at phase 1[0m
+[1;31mE (37695) DHT11:: Failed at phase 1[0m
+[1;31mE (37735) DHT11:: Failed at phase 1[0m
+[1;31mE (37775) DHT11:: Failed at phase 1[0m
+[1;31mE (37815) DHT11:: Failed at phase 1[0m
+[1;31mE (37855) DHT11:: Failed at phase 1[0m
+[1;31mE (37885) DHT11:: Failed at phase 1[0m
+[1;31mE (37925) DHT11:: Failed at phase 1[0m
+[1;31mE (37965) DHT11:: Failed at phase 1[0m
+[1;31mE (38005) DHT11:: Failed at phase 1[0m
+[0;32mI (38145) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.92915}}[0m
+[0;32mI (38155) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.45755}}[0m
+[0;32mI (38165) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (38165) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":270.15668}}[0m
+[0;32mI (38175) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (41195) DHT11:: Failed at phase 1[0m
+[1;31mE (41235) DHT11:: Failed at phase 1[0m
+[1;31mE (41275) DHT11:: Failed at phase 1[0m
+[1;31mE (41315) DHT11:: Failed at phase 1[0m
+[1;31mE (41355) DHT11:: Failed at phase 1[0m
+[1;31mE (41385) DHT11:: Failed at phase 1[0m
+[1;31mE (41425) DHT11:: Failed at phase 1[0m
+[1;31mE (41465) DHT11:: Failed at phase 1[0m
+[1;31mE (41505) DHT11:: Failed at phase 1[0m
+[1;31mE (41545) DHT11:: Failed at phase 1[0m
+[1;31mE (41585) DHT11:: Failed at phase 1[0m
+[1;31mE (41615) DHT11:: Failed at phase 1[0m
+[1;31mE (41655) DHT11:: Failed at phase 1[0m
+[1;31mE (41695) DHT11:: Failed at phase 1[0m
+[1;31mE (41735) DHT11:: Failed at phase 1[0m
+[0;32mI (41875) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.68097}}[0m
+[0;32mI (41885) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.45178}}[0m
+[0;32mI (41895) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (41895) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":268.91397}}[0m
+[0;32mI (41905) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (44925) DHT11:: Failed at phase 1[0m
+[1;31mE (44965) DHT11:: Failed at phase 1[0m
+[1;31mE (45005) DHT11:: Failed at phase 1[0m
+[1;31mE (45045) DHT11:: Failed at phase 1[0m
+[1;31mE (45085) DHT11:: Failed at phase 1[0m
+[1;31mE (45115) DHT11:: Failed at phase 1[0m
+[1;31mE (45155) DHT11:: Failed at phase 1[0m
+[1;31mE (45195) DHT11:: Failed at phase 1[0m
+[1;31mE (45235) DHT11:: Failed at phase 1[0m
+[1;31mE (45275) DHT11:: Failed at phase 1[0m
+[1;31mE (45315) DHT11:: Failed at phase 1[0m
+[1;31mE (45345) DHT11:: Failed at phase 1[0m
+[1;31mE (45385) DHT11:: Failed at phase 1[0m
+[1;31mE (45425) DHT11:: Failed at phase 1[0m
+[1;31mE (45465) DHT11:: Failed at phase 1[0m
+[0;32mI (45605) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.99519}}[0m
+[0;32mI (45615) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.46088}}[0m
+[0;32mI (45625) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (45625) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":270.68466}}[0m
+[0;32mI (45635) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (48655) DHT11:: Failed at phase 1[0m
+[1;31mE (48695) DHT11:: Failed at phase 1[0m
+[1;31mE (48735) DHT11:: Failed at phase 1[0m
+[1;31mE (48775) DHT11:: Failed at phase 1[0m
+[1;31mE (48815) DHT11:: Failed at phase 1[0m
+[1;31mE (48845) DHT11:: Failed at phase 1[0m
+[1;31mE (48885) DHT11:: Failed at phase 1[0m
+[1;31mE (48925) DHT11:: Failed at phase 1[0m
+[1;31mE (48965) DHT11:: Failed at phase 1[0m
+[1;31mE (49005) DHT11:: Failed at phase 1[0m
+[1;31mE (49045) DHT11:: Failed at phase 1[0m
+[1;31mE (49075) DHT11:: Failed at phase 1[0m
+[1;31mE (49115) DHT11:: Failed at phase 1[0m
+[1;31mE (49155) DHT11:: Failed at phase 1[0m
+[1;31mE (49195) DHT11:: Failed at phase 1[0m
+[0;32mI (49335) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.90177}}[0m
+[0;32mI (49345) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.45937}}[0m
+[0;32mI (49355) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (49355) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":270.28894}}[0m
+[0;32mI (49365) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (52385) DHT11:: Failed at phase 1[0m
+[1;31mE (52425) DHT11:: Failed at phase 1[0m
+[1;31mE (52465) DHT11:: Failed at phase 1[0m
+[1;31mE (52505) DHT11:: Failed at phase 1[0m
+[1;31mE (52545) DHT11:: Failed at phase 1[0m
+[1;31mE (52575) DHT11:: Failed at phase 1[0m
+[1;31mE (52615) DHT11:: Failed at phase 1[0m
+[1;31mE (52655) DHT11:: Failed at phase 1[0m
+[1;31mE (52695) DHT11:: Failed at phase 1[0m
+[1;31mE (52735) DHT11:: Failed at phase 1[0m
+[1;31mE (52775) DHT11:: Failed at phase 1[0m
+[1;31mE (52805) DHT11:: Failed at phase 1[0m
+[1;31mE (52845) DHT11:: Failed at phase 1[0m
+[1;31mE (52885) DHT11:: Failed at phase 1[0m
+[1;31mE (52925) DHT11:: Failed at phase 1[0m
+[0;32mI (53065) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.01856}}[0m
+[0;32mI (53075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.45357}}[0m
+[0;32mI (53085) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (53085) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":267.48514}}[0m
+[0;32mI (53095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (56115) DHT11:: Failed at phase 1[0m
+[1;31mE (56155) DHT11:: Failed at phase 1[0m
+[1;31mE (56195) DHT11:: Failed at phase 1[0m
+[1;31mE (56235) DHT11:: Failed at phase 1[0m
+[1;31mE (56275) DHT11:: Failed at phase 1[0m
+[1;31mE (56305) DHT11:: Failed at phase 1[0m
+[1;31mE (56345) DHT11:: Failed at phase 1[0m
+[1;31mE (56385) DHT11:: Failed at phase 1[0m
+[1;31mE (56425) DHT11:: Failed at phase 1[0m
+[1;31mE (56465) DHT11:: Failed at phase 1[0m
+[1;31mE (56505) DHT11:: Failed at phase 1[0m
+[1;31mE (56535) DHT11:: Failed at phase 1[0m
+[1;31mE (56575) DHT11:: Failed at phase 1[0m
+[1;31mE (56615) DHT11:: Failed at phase 1[0m
+[1;31mE (56655) DHT11:: Failed at phase 1[0m
+[0;32mI (56795) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.98152}}[0m
+[0;32mI (56805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.46204}}[0m
+[0;32mI (56815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (56815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":270.77930}}[0m
+[0;32mI (56825) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (59845) DHT11:: Failed at phase 1[0m
+[1;31mE (59885) DHT11:: Failed at phase 1[0m
+[1;31mE (59925) DHT11:: Failed at phase 1[0m
+[1;31mE (59965) DHT11:: Failed at phase 1[0m
+[1;31mE (60005) DHT11:: Failed at phase 1[0m
+[1;31mE (60035) DHT11:: Failed at phase 1[0m
+[1;31mE (60075) DHT11:: Failed at phase 1[0m
+[1;31mE (60115) DHT11:: Failed at phase 1[0m
+[1;31mE (60155) DHT11:: Failed at phase 1[0m
+[1;31mE (60195) DHT11:: Failed at phase 1[0m
+[1;31mE (60235) DHT11:: Failed at phase 1[0m
+[1;31mE (60265) DHT11:: Failed at phase 1[0m
+[1;31mE (60305) DHT11:: Failed at phase 1[0m
+[1;31mE (60345) DHT11:: Failed at phase 1[0m
+[1;31mE (60385) DHT11:: Failed at phase 1[0m
+[0;32mI (60525) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.27634}}[0m
+[0;32mI (60535) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.44865}}[0m
+[0;32mI (60545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (60545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":270.02869}}[0m
+[0;32mI (60555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (63575) DHT11:: Failed at phase 1[0m
+[1;31mE (63615) DHT11:: Failed at phase 1[0m
+[1;31mE (63655) DHT11:: Failed at phase 1[0m
+[1;31mE (63695) DHT11:: Failed at phase 1[0m
+[1;31mE (63735) DHT11:: Failed at phase 1[0m
+[1;31mE (63765) DHT11:: Failed at phase 1[0m
+[1;31mE (63805) DHT11:: Failed at phase 1[0m
+[1;31mE (63845) DHT11:: Failed at phase 1[0m
+[1;31mE (63885) DHT11:: Failed at phase 1[0m
+[1;31mE (63925) DHT11:: Failed at phase 1[0m
+[1;31mE (63965) DHT11:: Failed at phase 1[0m
+[1;31mE (63995) DHT11:: Failed at phase 1[0m
+[1;31mE (64035) DHT11:: Failed at phase 1[0m
+[1;31mE (64075) DHT11:: Failed at phase 1[0m
+[1;31mE (64115) DHT11:: Failed at phase 1[0m
+[0;32mI (64255) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.00768}}[0m
+[0;32mI (64265) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.46462}}[0m
+[0;32mI (64275) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (64275) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":271.12708}}[0m
+[0;32mI (64285) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (67305) DHT11:: Failed at phase 1[0m
+[1;31mE (67345) DHT11:: Failed at phase 1[0m
+[1;31mE (67385) DHT11:: Failed at phase 1[0m
+[1;31mE (67425) DHT11:: Failed at phase 1[0m
+[1;31mE (67465) DHT11:: Failed at phase 1[0m
+[1;31mE (67495) DHT11:: Failed at phase 1[0m
+[1;31mE (67535) DHT11:: Failed at phase 1[0m
+[1;31mE (67575) DHT11:: Failed at phase 1[0m
+[1;31mE (67615) DHT11:: Failed at phase 1[0m
+[1;31mE (67655) DHT11:: Failed at phase 1[0m
+[1;31mE (67695) DHT11:: Failed at phase 1[0m
+[1;31mE (67725) DHT11:: Failed at phase 1[0m
+[1;31mE (67765) DHT11:: Failed at phase 1[0m
+[1;31mE (67805) DHT11:: Failed at phase 1[0m
+[1;31mE (67845) DHT11:: Failed at phase 1[0m
+[0;32mI (67985) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.79126}}[0m
+[0;32mI (67995) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.46438}}[0m
+[0;32mI (68005) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (68005) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":270.56787}}[0m
+[0;32mI (68015) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (71035) DHT11:: Failed at phase 1[0m
+[1;31mE (71075) DHT11:: Failed at phase 1[0m
+[1;31mE (71115) DHT11:: Failed at phase 1[0m
+[1;31mE (71155) DHT11:: Failed at phase 1[0m
+[1;31mE (71195) DHT11:: Failed at phase 1[0m
+[1;31mE (71225) DHT11:: Failed at phase 1[0m
+[1;31mE (71265) DHT11:: Failed at phase 1[0m
+[1;31mE (71305) DHT11:: Failed at phase 1[0m
+[1;31mE (71345) DHT11:: Failed at phase 1[0m
+[1;31mE (71385) DHT11:: Failed at phase 1[0m
+[1;31mE (71425) DHT11:: Failed at phase 1[0m
+[1;31mE (71455) DHT11:: Failed at phase 1[0m
+[1;31mE (71495) DHT11:: Failed at phase 1[0m
+[1;31mE (71535) DHT11:: Failed at phase 1[0m
+[1;31mE (71575) DHT11:: Failed at phase 1[0m
+[0;32mI (71715) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.53506}}[0m
+[0;32mI (71725) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.48064}}[0m
+[0;32mI (71735) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (71735) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":271.71677}}[0m
+[0;32mI (71745) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (74765) DHT11:: Failed at phase 1[0m
+[1;31mE (74805) DHT11:: Failed at phase 1[0m
+[1;31mE (74845) DHT11:: Failed at phase 1[0m
+[1;31mE (74885) DHT11:: Failed at phase 1[0m
+[1;31mE (74925) DHT11:: Failed at phase 1[0m
+[1;31mE (74955) DHT11:: Failed at phase 1[0m
+[1;31mE (74995) DHT11:: Failed at phase 1[0m
+[1;31mE (75035) DHT11:: Failed at phase 1[0m
+[1;31mE (75075) DHT11:: Failed at phase 1[0m
+[1;31mE (75115) DHT11:: Failed at phase 1[0m
+[1;31mE (75155) DHT11:: Failed at phase 1[0m
+[1;31mE (75185) DHT11:: Failed at phase 1[0m
+[1;31mE (75225) DHT11:: Failed at phase 1[0m
+[1;31mE (75265) DHT11:: Failed at phase 1[0m
+[1;31mE (75305) DHT11:: Failed at phase 1[0m
+[0;32mI (75445) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.24918}}[0m
+[0;32mI (75455) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.46967}}[0m
+[0;32mI (75465) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (75465) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":272.27887}}[0m
+[0;32mI (75475) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (78495) DHT11:: Failed at phase 1[0m
+[1;31mE (78535) DHT11:: Failed at phase 1[0m
+[1;31mE (78575) DHT11:: Failed at phase 1[0m
+[1;31mE (78615) DHT11:: Failed at phase 1[0m
+[1;31mE (78655) DHT11:: Failed at phase 1[0m
+[1;31mE (78685) DHT11:: Failed at phase 1[0m
+[1;31mE (78725) DHT11:: Failed at phase 1[0m
+[1;31mE (78765) DHT11:: Failed at phase 1[0m
+[1;31mE (78805) DHT11:: Failed at phase 1[0m
+[1;31mE (78845) DHT11:: Failed at phase 1[0m
+[1;31mE (78885) DHT11:: Failed at phase 1[0m
+[1;31mE (78915) DHT11:: Failed at phase 1[0m
+[1;31mE (78955) DHT11:: Failed at phase 1[0m
+[1;31mE (78995) DHT11:: Failed at phase 1[0m
+[1;31mE (79035) DHT11:: Failed at phase 1[0m
+[0;32mI (79175) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.96259}}[0m
+[0;32mI (79185) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.46882}}[0m
+[0;32mI (79195) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (79195) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":271.47818}}[0m
+[0;32mI (79205) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (82225) DHT11:: Failed at phase 1[0m
+[1;31mE (82265) DHT11:: Failed at phase 1[0m
+[1;31mE (82305) DHT11:: Failed at phase 1[0m
+[1;31mE (82345) DHT11:: Failed at phase 1[0m
+[1;31mE (82385) DHT11:: Failed at phase 1[0m
+[1;31mE (82415) DHT11:: Failed at phase 1[0m
+[1;31mE (82455) DHT11:: Failed at phase 1[0m
+[1;31mE (82495) DHT11:: Failed at phase 1[0m
+[1;31mE (82535) DHT11:: Failed at phase 1[0m
+[1;31mE (82575) DHT11:: Failed at phase 1[0m
+[1;31mE (82615) DHT11:: Failed at phase 1[0m
+[1;31mE (82645) DHT11:: Failed at phase 1[0m
+[1;31mE (82685) DHT11:: Failed at phase 1[0m
+[1;31mE (82725) DHT11:: Failed at phase 1[0m
+[1;31mE (82765) DHT11:: Failed at phase 1[0m
+[0;32mI (82905) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.96829}}[0m
+[0;32mI (82915) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.47972}}[0m
+[0;32mI (82925) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (82925) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":272.69052}}[0m
+[0;32mI (82935) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (85955) DHT11:: Failed at phase 1[0m
+[1;31mE (85995) DHT11:: Failed at phase 1[0m
+[1;31mE (86035) DHT11:: Failed at phase 1[0m
+[1;31mE (86075) DHT11:: Failed at phase 1[0m
+[1;31mE (86115) DHT11:: Failed at phase 1[0m
+[1;31mE (86145) DHT11:: Failed at phase 1[0m
+[1;31mE (86185) DHT11:: Failed at phase 1[0m
+[1;31mE (86225) DHT11:: Failed at phase 1[0m
+[1;31mE (86265) DHT11:: Failed at phase 1[0m
+[1;31mE (86305) DHT11:: Failed at phase 1[0m
+[1;31mE (86345) DHT11:: Failed at phase 1[0m
+[1;31mE (86375) DHT11:: Failed at phase 1[0m
+[1;31mE (86415) DHT11:: Failed at phase 1[0m
+[1;31mE (86455) DHT11:: Failed at phase 1[0m
+[1;31mE (86495) DHT11:: Failed at phase 1[0m
+[0;32mI (86635) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.70835}}[0m
+[0;32mI (86645) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.47242}}[0m
+[0;32mI (86655) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (86655) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":271.24530}}[0m
+[0;32mI (86665) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (89685) DHT11:: Failed at phase 1[0m
+[1;31mE (89725) DHT11:: Failed at phase 1[0m
+[1;31mE (89765) DHT11:: Failed at phase 1[0m
+[1;31mE (89805) DHT11:: Failed at phase 1[0m
+[1;31mE (89845) DHT11:: Failed at phase 1[0m
+[1;31mE (89875) DHT11:: Failed at phase 1[0m
+[1;31mE (89915) DHT11:: Failed at phase 1[0m
+[1;31mE (89955) DHT11:: Failed at phase 1[0m
+[1;31mE (89995) DHT11:: Failed at phase 2[0m
+[1;31mE (90035) DHT11:: Failed at phase 2[0m
+[1;31mE (90075) DHT11:: Failed at phase 2[0m
+[1;31mE (90105) DHT11:: Failed at phase 1[0m
+[1;31mE (90145) DHT11:: Failed at phase 1[0m
+[1;31mE (90185) DHT11:: Failed at phase 1[0m
+[1;31mE (90225) DHT11:: Failed at phase 1[0m
+[0;32mI (90365) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":337.50824}}[0m
+[0;32mI (90375) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.47005}}[0m
+[0;32mI (90385) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (90385) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":833.66193}}[0m
+[0;32mI (90395) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (93415) DHT11:: Failed at phase 1[0m
+[1;31mE (93455) DHT11:: Failed at phase 1[0m
+[1;31mE (93495) DHT11:: Failed at phase 1[0m
+[1;31mE (93535) DHT11:: Failed at phase 1[0m
+[1;31mE (93575) DHT11:: Failed at phase 1[0m
+[1;31mE (93605) DHT11:: Failed at phase 1[0m
+[1;31mE (93645) DHT11:: Failed at phase 1[0m
+[1;31mE (93685) DHT11:: Failed at phase 1[0m
+[1;31mE (93725) DHT11:: Failed at phase 1[0m
+[1;31mE (93765) DHT11:: Failed at phase 1[0m
+[1;31mE (93805) DHT11:: Failed at phase 1[0m
+[1;31mE (93835) DHT11:: Failed at phase 1[0m
+[1;31mE (93875) DHT11:: Failed at phase 1[0m
+[1;31mE (93915) DHT11:: Failed at phase 1[0m
+[1;31mE (93955) DHT11:: Failed at phase 1[0m
+[0;32mI (94095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.16241}}[0m
+[0;32mI (94105) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.46467}}[0m
+[0;32mI (94115) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[0;32mI (94115) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":271.51407}}[0m
+[1;31mE (94125) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (94125) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (94135) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (97145) DHT11:: Failed at phase 1[0m
+[1;31mE (97185) DHT11:: Failed at phase 1[0m
+[1;31mE (97225) DHT11:: Failed at phase 1[0m
+[1;31mE (97265) DHT11:: Failed at phase 1[0m
+[1;31mE (97305) DHT11:: Failed at phase 1[0m
+[1;31mE (97335) DHT11:: Failed at phase 1[0m
+[1;31mE (97375) DHT11:: Failed at phase 1[0m
+[1;31mE (97415) DHT11:: Failed at phase 1[0m
+[1;31mE (97455) DHT11:: Failed at phase 1[0m
+[1;31mE (97495) DHT11:: Failed at phase 1[0m
+[1;31mE (97535) DHT11:: Failed at phase 1[0m
+[1;31mE (97565) DHT11:: Failed at phase 1[0m
+[1;31mE (97605) DHT11:: Failed at phase 1[0m
+[1;31mE (97645) DHT11:: Failed at phase 1[0m
+[1;31mE (97685) DHT11:: Failed at phase 1[0m
+[0;32mI (97825) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.51351}}[0m
+[0;32mI (97835) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.47068}}[0m
+[1;31mE (97835) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (97835) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (97845) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (97855) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":273.04382}}[0m
+[1;31mE (97855) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (97865) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (97875) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (100885) DHT11:: Failed at phase 1[0m
+[1;31mE (100925) DHT11:: Failed at phase 1[0m
+[1;31mE (100965) DHT11:: Failed at phase 1[0m
+[1;31mE (101005) DHT11:: Failed at phase 1[0m
+[1;31mE (101045) DHT11:: Failed at phase 1[0m
+[1;31mE (101075) DHT11:: Failed at phase 1[0m
+[1;31mE (101115) DHT11:: Failed at phase 1[0m
+[1;31mE (101155) DHT11:: Failed at phase 1[0m
+[1;31mE (101195) DHT11:: Failed at phase 1[0m
+[1;31mE (101235) DHT11:: Failed at phase 1[0m
+[1;31mE (101275) DHT11:: Failed at phase 1[0m
+[1;31mE (101305) DHT11:: Failed at phase 1[0m
+[1;31mE (101345) DHT11:: Failed at phase 1[0m
+[1;31mE (101385) DHT11:: Failed at phase 1[0m
+[1;31mE (101425) DHT11:: Failed at phase 1[0m
+[0;32mI (101565) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.43580}}[0m
+[0;32mI (101575) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.47396}}[0m
+[1;31mE (101575) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (101575) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (101585) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (101595) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":273.21353}}[0m
+[1;31mE (101595) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (101605) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (101615) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (104635) DHT11:: Failed at phase 1[0m
+[1;31mE (104675) DHT11:: Failed at phase 1[0m
+[1;31mE (104715) DHT11:: Failed at phase 1[0m
+[1;31mE (104755) DHT11:: Failed at phase 1[0m
+[1;31mE (104795) DHT11:: Failed at phase 1[0m
+[1;31mE (104825) DHT11:: Failed at phase 1[0m
+[1;31mE (104865) DHT11:: Failed at phase 1[0m
+[1;31mE (104905) DHT11:: Failed at phase 1[0m
+[1;31mE (104945) DHT11:: Failed at phase 1[0m
+[1;31mE (104985) DHT11:: Failed at phase 1[0m
+[1;31mE (105025) DHT11:: Failed at phase 1[0m
+[1;31mE (105055) DHT11:: Failed at phase 1[0m
+[1;31mE (105095) DHT11:: Failed at phase 1[0m
+[1;31mE (105135) DHT11:: Failed at phase 1[0m
+[1;31mE (105175) DHT11:: Failed at phase 1[0m
+[0;32mI (105315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.00606}}[0m
+[1;31mE (105315) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (105325) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.46790}}[0m
+[1;31mE (105325) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (105335) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (105345) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (105345) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":271.48343}}[0m
+[1;31mE (105355) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (105365) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (105365) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (108385) DHT11:: Failed at phase 1[0m
+[1;31mE (108425) DHT11:: Failed at phase 1[0m
+[1;31mE (108465) DHT11:: Failed at phase 1[0m
+[1;31mE (108505) DHT11:: Failed at phase 1[0m
+[1;31mE (108545) DHT11:: Failed at phase 1[0m
+[1;31mE (108575) DHT11:: Failed at phase 1[0m
+[1;31mE (108615) DHT11:: Failed at phase 1[0m
+[1;31mE (108655) DHT11:: Failed at phase 1[0m
+[1;31mE (108695) DHT11:: Failed at phase 1[0m
+[1;31mE (108735) DHT11:: Failed at phase 1[0m
+[1;31mE (108775) DHT11:: Failed at phase 1[0m
+[1;31mE (108805) DHT11:: Failed at phase 1[0m
+[1;31mE (108845) DHT11:: Failed at phase 1[0m
+[1;31mE (108885) DHT11:: Failed at phase 1[0m
+[1;31mE (108925) DHT11:: Failed at phase 1[0m
+[0;32mI (109065) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.59221}}[0m
+[0;32mI (109075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.47247}}[0m
+[1;31mE (109075) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (109075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (109085) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (109095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":273.43558}}[0m
+[1;31mE (109095) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (109105) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (109115) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (112135) DHT11:: Failed at phase 1[0m
+[1;31mE (112175) DHT11:: Failed at phase 1[0m
+[1;31mE (112215) DHT11:: Failed at phase 1[0m
+[1;31mE (112255) DHT11:: Failed at phase 1[0m
+[1;31mE (112295) DHT11:: Failed at phase 1[0m
+[1;31mE (112325) DHT11:: Failed at phase 1[0m
+[1;31mE (112365) DHT11:: Failed at phase 1[0m
+[1;31mE (112405) DHT11:: Failed at phase 1[0m
+[1;31mE (112445) DHT11:: Failed at phase 1[0m
+[1;31mE (112485) DHT11:: Failed at phase 1[0m
+[1;31mE (112525) DHT11:: Failed at phase 1[0m
+[1;31mE (112555) DHT11:: Failed at phase 1[0m
+[1;31mE (112595) DHT11:: Failed at phase 1[0m
+[1;31mE (112635) DHT11:: Failed at phase 1[0m
+[1;31mE (112675) DHT11:: Failed at phase 1[0m
+[0;32mI (112815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.65764}}[0m
+[0;32mI (112825) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.48646}}[0m
+[1;31mE (112825) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (112825) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (112835) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (112845) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":275.14581}}[0m
+[1;31mE (112855) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (112855) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (112865) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (115885) DHT11:: Failed at phase 1[0m
+[1;31mE (115925) DHT11:: Failed at phase 1[0m
+[1;31mE (115965) DHT11:: Failed at phase 1[0m
+[1;31mE (116005) DHT11:: Failed at phase 1[0m
+[1;31mE (116045) DHT11:: Failed at phase 1[0m
+[1;31mE (116075) DHT11:: Failed at phase 1[0m
+[1;31mE (116115) DHT11:: Failed at phase 1[0m
+[1;31mE (116155) DHT11:: Failed at phase 1[0m
+[1;31mE (116195) DHT11:: Failed at phase 1[0m
+[1;31mE (116235) DHT11:: Failed at phase 1[0m
+[1;31mE (116275) DHT11:: Failed at phase 1[0m
+[1;31mE (116305) DHT11:: Failed at phase 1[0m
+[1;31mE (116345) DHT11:: Failed at phase 1[0m
+[1;31mE (116385) DHT11:: Failed at phase 1[0m
+[1;31mE (116425) DHT11:: Failed at phase 1[0m
+[0;32mI (116565) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.37536}}[0m
+[0;32mI (116575) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.47890}}[0m
+[1;31mE (116575) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (116575) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (116585) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (116595) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":273.60922}}[0m
+[1;31mE (116595) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (116605) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (116615) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (119625) DHT11:: Failed at phase 1[0m
+[1;31mE (119665) DHT11:: Failed at phase 1[0m
+[1;31mE (119705) DHT11:: Failed at phase 1[0m
+[1;31mE (119745) DHT11:: Failed at phase 1[0m
+[1;31mE (119785) DHT11:: Failed at phase 1[0m
+[1;31mE (119815) DHT11:: Failed at phase 1[0m
+[1;31mE (119855) DHT11:: Failed at phase 1[0m
+[1;31mE (119895) DHT11:: Failed at phase 1[0m
+[1;31mE (119935) DHT11:: Failed at phase 1[0m
+[1;31mE (119975) DHT11:: Failed at phase 1[0m
+[1;31mE (120015) DHT11:: Failed at phase 1[0m
+[1;31mE (120045) DHT11:: Failed at phase 1[0m
+[1;31mE (120085) DHT11:: Failed at phase 1[0m
+[1;31mE (120125) DHT11:: Failed at phase 1[0m
+[1;31mE (120165) DHT11:: Failed at phase 1[0m
+[0;32mI (120305) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.66408}}[0m
+[1;31mE (120305) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (120315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.45864}}[0m
+[1;31mE (120315) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (120325) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (120335) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (120335) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":272.08282}}[0m
+[1;31mE (120345) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (120355) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (120355) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (123375) DHT11:: Failed at phase 1[0m
+[1;31mE (123415) DHT11:: Failed at phase 1[0m
+[1;31mE (123455) DHT11:: Failed at phase 1[0m
+[1;31mE (123495) DHT11:: Failed at phase 1[0m
+[1;31mE (123535) DHT11:: Failed at phase 1[0m
+[1;31mE (123565) DHT11:: Failed at phase 1[0m
+[1;31mE (123605) DHT11:: Failed at phase 1[0m
+[1;31mE (123645) DHT11:: Failed at phase 1[0m
+[1;31mE (123685) DHT11:: Failed at phase 1[0m
+[1;31mE (123725) DHT11:: Failed at phase 1[0m
+[1;31mE (123765) DHT11:: Failed at phase 2[0m
+[1;31mE (123795) DHT11:: Failed at phase 2[0m
+[1;31mE (123835) DHT11:: Failed at phase 2[0m
+[1;31mE (123875) DHT11:: Failed at phase 2[0m
+[1;31mE (123915) DHT11:: Failed at phase 2[0m
+[0;32mI (124055) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.56556}}[0m
+[0;32mI (124065) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":7.16449}}[0m
+[1;31mE (124065) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (124065) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (124075) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (124085) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":792.14636}}[0m
+[1;31mE (124095) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (124095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (124105) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (127125) DHT11:: Failed at phase 1[0m
+[1;31mE (127165) DHT11:: Failed at phase 1[0m
+[1;31mE (127205) DHT11:: Failed at phase 1[0m
+[1;31mE (127245) DHT11:: Failed at phase 1[0m
+[1;31mE (127285) DHT11:: Failed at phase 1[0m
+[1;31mE (127315) DHT11:: Failed at phase 1[0m
+[1;31mE (127355) DHT11:: Failed at phase 1[0m
+[1;31mE (127395) DHT11:: Failed at phase 1[0m
+[1;31mE (127435) DHT11:: Failed at phase 1[0m
+[1;31mE (127475) DHT11:: Failed at phase 1[0m
+[1;31mE (127515) DHT11:: Failed at phase 1[0m
+[1;31mE (127545) DHT11:: Failed at phase 1[0m
+[1;31mE (127585) DHT11:: Failed at phase 1[0m
+[1;31mE (127625) DHT11:: Failed at phase 1[0m
+[1;31mE (127665) DHT11:: Failed at phase 1[0m
+[0;32mI (127805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.56913}}[0m
+[0;32mI (127815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.47393}}[0m
+[1;31mE (127815) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (127815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (127825) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (127835) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":273.54010}}[0m
+[1;31mE (127845) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (127845) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (127855) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (130875) DHT11:: Failed at phase 1[0m
+[1;31mE (130915) DHT11:: Failed at phase 1[0m
+[1;31mE (130955) DHT11:: Failed at phase 1[0m
+[1;31mE (130995) DHT11:: Failed at phase 1[0m
+[1;31mE (131035) DHT11:: Failed at phase 1[0m
+[1;31mE (131065) DHT11:: Failed at phase 1[0m
+[1;31mE (131105) DHT11:: Failed at phase 1[0m
+[1;31mE (131145) DHT11:: Failed at phase 1[0m
+[1;31mE (131185) DHT11:: Failed at phase 1[0m
+[1;31mE (131225) DHT11:: Failed at phase 1[0m
+[1;31mE (131265) DHT11:: Failed at phase 1[0m
+[1;31mE (131295) DHT11:: Failed at phase 1[0m
+[1;31mE (131335) DHT11:: Failed at phase 1[0m
+[1;31mE (131375) DHT11:: Failed at phase 1[0m
+[1;31mE (131415) DHT11:: Failed at phase 1[0m
+[0;32mI (131555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.66122}}[0m
+[0;32mI (131565) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.45229}}[0m
+[1;31mE (131565) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (131565) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (131575) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (131585) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":271.37305}}[0m
+[1;31mE (131585) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (131595) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (131605) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (134625) DHT11:: Failed at phase 1[0m
+[1;31mE (134665) DHT11:: Failed at phase 1[0m
+[1;31mE (134705) DHT11:: Failed at phase 1[0m
+[1;31mE (134745) DHT11:: Failed at phase 1[0m
+[1;31mE (134785) DHT11:: Failed at phase 1[0m
+[1;31mE (134815) DHT11:: Failed at phase 1[0m
+[1;31mE (134855) DHT11:: Failed at phase 1[0m
+[1;31mE (134895) DHT11:: Failed at phase 1[0m
+[1;31mE (134935) DHT11:: Failed at phase 1[0m
+[1;31mE (134975) DHT11:: Failed at phase 1[0m
+[1;31mE (135015) DHT11:: Failed at phase 1[0m
+[1;31mE (135045) DHT11:: Failed at phase 1[0m
+[1;31mE (135085) DHT11:: Failed at phase 1[0m
+[1;31mE (135125) DHT11:: Failed at phase 1[0m
+[1;31mE (135165) DHT11:: Failed at phase 1[0m
+[0;32mI (135305) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.58257}}[0m
+[1;31mE (135305) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (135315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.46013}}[0m
+[1;31mE (135315) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (135325) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (135335) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (135335) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":272.04776}}[0m
+[1;31mE (135345) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (135355) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (135355) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (138375) DHT11:: Failed at phase 1[0m
+[1;31mE (138415) DHT11:: Failed at phase 2[0m
+[1;31mE (138455) DHT11:: Failed at phase 2[0m
+[1;31mE (138495) DHT11:: Failed at phase 2[0m
+[1;31mE (138535) DHT11:: Failed at phase 2[0m
+[1;31mE (138565) DHT11:: Failed at phase 2[0m
+[1;31mE (138605) DHT11:: Failed at phase 2[0m
+[1;31mE (138645) DHT11:: Failed at phase 2[0m
+[1;31mE (138685) DHT11:: Failed at phase 1[0m
+[1;31mE (138725) DHT11:: Failed at phase 2[0m
+[1;31mE (138765) DHT11:: Failed at phase 2[0m
+[1;31mE (138795) DHT11:: Failed at phase 2[0m
+[1;31mE (138835) DHT11:: Failed at phase 2[0m
+[1;31mE (138875) DHT11:: Failed at phase 1[0m
+[1;31mE (138915) DHT11:: Failed at phase 2[0m
+[0;32mI (139055) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":390.51758}}[0m
+[0;32mI (139065) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":9.59544}}[0m
+[1;31mE (139065) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (139075) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (139075) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (139085) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":3747.18970}}[0m
+[1;31mE (139095) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (139095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (139105) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (142125) DHT11:: Failed at phase 1[0m
+[1;31mE (142165) DHT11:: Failed at phase 1[0m
+[1;31mE (142205) DHT11:: Failed at phase 1[0m
+[1;31mE (142245) DHT11:: Failed at phase 1[0m
+[1;31mE (142285) DHT11:: Failed at phase 1[0m
+[1;31mE (142315) DHT11:: Failed at phase 1[0m
+[1;31mE (142355) DHT11:: Failed at phase 1[0m
+[1;31mE (142395) DHT11:: Failed at phase 1[0m
+[1;31mE (142435) DHT11:: Failed at phase 1[0m
+[1;31mE (142475) DHT11:: Failed at phase 1[0m
+[1;31mE (142515) DHT11:: Failed at phase 1[0m
+[1;31mE (142545) DHT11:: Failed at phase 1[0m
+[1;31mE (142585) DHT11:: Failed at phase 1[0m
+[1;31mE (142625) DHT11:: Failed at phase 1[0m
+[1;31mE (142665) DHT11:: Failed at phase 1[0m
+[0;32mI (142805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.30627}}[0m
+[0;32mI (142815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.48594}}[0m
+[1;31mE (142815) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (142815) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (142825) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (142835) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":274.21533}}[0m
+[1;31mE (142845) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (142845) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (142855) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (145875) DHT11:: Failed at phase 1[0m
+[1;31mE (145915) DHT11:: Failed at phase 1[0m
+[1;31mE (145955) DHT11:: Failed at phase 1[0m
+[1;31mE (145995) DHT11:: Failed at phase 1[0m
+[1;31mE (146035) DHT11:: Failed at phase 1[0m
+[1;31mE (146065) DHT11:: Failed at phase 1[0m
+[1;31mE (146105) DHT11:: Failed at phase 1[0m
+[1;31mE (146145) DHT11:: Failed at phase 1[0m
+[1;31mE (146185) DHT11:: Failed at phase 1[0m
+[1;31mE (146225) DHT11:: Failed at phase 1[0m
+[1;31mE (146265) DHT11:: Failed at phase 1[0m
+[1;31mE (146295) DHT11:: Failed at phase 1[0m
+[1;31mE (146335) DHT11:: Failed at phase 1[0m
+[1;31mE (146375) DHT11:: Failed at phase 1[0m
+[1;31mE (146415) DHT11:: Failed at phase 1[0m
+[0;32mI (146555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.24280}}[0m
+[0;32mI (146565) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.46539}}[0m
+[1;31mE (146565) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (146565) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (146575) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (146585) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":271.79105}}[0m
+[1;31mE (146595) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (146595) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (146605) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (149625) DHT11:: Failed at phase 1[0m
+[1;31mE (149665) DHT11:: Failed at phase 1[0m
+[1;31mE (149705) DHT11:: Failed at phase 1[0m
+[1;31mE (149745) DHT11:: Failed at phase 1[0m
+[1;31mE (149785) DHT11:: Failed at phase 1[0m
+[1;31mE (149815) DHT11:: Failed at phase 1[0m
+[1;31mE (149855) DHT11:: Failed at phase 1[0m
+[1;31mE (149895) DHT11:: Failed at phase 1[0m
+[1;31mE (149935) DHT11:: Failed at phase 1[0m
+[1;31mE (149975) DHT11:: Failed at phase 1[0m
+[1;31mE (150015) DHT11:: Failed at phase 1[0m
+[1;31mE (150045) DHT11:: Failed at phase 1[0m
+[1;31mE (150085) DHT11:: Failed at phase 1[0m
+[1;31mE (150125) DHT11:: Failed at phase 1[0m
+[1;31mE (150165) DHT11:: Failed at phase 1[0m
+[0;32mI (150305) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.06274}}[0m
+[1;31mE (150305) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (150315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.48075}}[0m
+[1;31mE (150315) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (150325) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (150335) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (150335) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":273.03778}}[0m
+[1;31mE (150345) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (150355) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (150355) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (153375) DHT11:: Failed at phase 1[0m
+[1;31mE (153415) DHT11:: Failed at phase 1[0m
+[1;31mE (153455) DHT11:: Failed at phase 1[0m
+[1;31mE (153495) DHT11:: Failed at phase 1[0m
+[1;31mE (153535) DHT11:: Failed at phase 1[0m
+[1;31mE (153565) DHT11:: Failed at phase 1[0m
+[1;31mE (153605) DHT11:: Failed at phase 1[0m
+[1;31mE (153645) DHT11:: Failed at phase 1[0m
+[1;31mE (153685) DHT11:: Failed at phase 1[0m
+[1;31mE (153725) DHT11:: Failed at phase 1[0m
+[1;31mE (153765) DHT11:: Failed at phase 1[0m
+[1;31mE (153795) DHT11:: Failed at phase 1[0m
+[1;31mE (153835) DHT11:: Failed at phase 1[0m
+[1;31mE (153875) DHT11:: Failed at phase 1[0m
+[1;31mE (153915) DHT11:: Failed at phase 1[0m
+[0;32mI (154055) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":109.85983}}[0m
+[0;32mI (154065) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.48245}}[0m
+[1;31mE (154065) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (154065) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (154075) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (154085) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":272.72119}}[0m
+[1;31mE (154085) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (154095) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (154105) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (157115) DHT11:: Failed at phase 1[0m
+[1;31mE (157155) DHT11:: Failed at phase 1[0m
+[1;31mE (157195) DHT11:: Failed at phase 1[0m
+[1;31mE (157235) DHT11:: Failed at phase 1[0m
+[1;31mE (157275) DHT11:: Failed at phase 1[0m
+[1;31mE (157305) DHT11:: Failed at phase 1[0m
+[1;31mE (157345) DHT11:: Failed at phase 1[0m
+[1;31mE (157385) DHT11:: Failed at phase 1[0m
+[1;31mE (157425) DHT11:: Failed at phase 1[0m
+[1;31mE (157465) DHT11:: Failed at phase 1[0m
+[1;31mE (157505) DHT11:: Failed at phase 1[0m
+[1;31mE (157535) DHT11:: Failed at phase 1[0m
+[1;31mE (157575) DHT11:: Failed at phase 1[0m
+[1;31mE (157615) DHT11:: Failed at phase 1[0m
+[1;31mE (157655) DHT11:: Failed at phase 1[0m
+[0;32mI (157795) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.36620}}[0m
+[0;32mI (157805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.47585}}[0m
+[1;31mE (157805) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (157805) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (157815) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (157825) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":273.24982}}[0m
+[1;31mE (157825) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (157835) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (157845) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (160865) DHT11:: Failed at phase 1[0m
+[1;31mE (160905) DHT11:: Failed at phase 1[0m
+[1;31mE (160945) DHT11:: Failed at phase 1[0m
+[1;31mE (160985) DHT11:: Failed at phase 1[0m
+[1;31mE (161025) DHT11:: Failed at phase 1[0m
+[1;31mE (161055) DHT11:: Failed at phase 1[0m
+[1;31mE (161095) DHT11:: Failed at phase 1[0m
+[1;31mE (161135) DHT11:: Failed at phase 1[0m
+[1;31mE (161175) DHT11:: Failed at phase 1[0m
+[1;31mE (161215) DHT11:: Failed at phase 1[0m
+[1;31mE (161255) DHT11:: Failed at phase 1[0m
+[1;31mE (161285) DHT11:: Failed at phase 1[0m
+[1;31mE (161325) DHT11:: Failed at phase 1[0m
+[1;31mE (161365) DHT11:: Failed at phase 1[0m
+[1;31mE (161405) DHT11:: Failed at phase 1[0m
+[0;32mI (161545) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.29965}}[0m
+[0;32mI (161555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.47175}}[0m
+[1;31mE (161555) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (161555) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (161565) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (161575) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":272.63272}}[0m
+[1;31mE (161585) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (161585) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (161595) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[1;31mE (164615) DHT11:: Failed at phase 1[0m
+[1;31mE (164655) DHT11:: Failed at phase 1[0m
+[1;31mE (164695) DHT11:: Failed at phase 1[0m
+[1;31mE (164735) DHT11:: Failed at phase 1[0m
+[1;31mE (164775) DHT11:: Failed at phase 1[0m
+[1;31mE (164805) DHT11:: Failed at phase 1[0m
+[1;31mE (164845) DHT11:: Failed at phase 1[0m
+[1;31mE (164885) DHT11:: Failed at phase 1[0m
+[1;31mE (164925) DHT11:: Failed at phase 1[0m
+[1;31mE (164965) DHT11:: Failed at phase 1[0m
+[1;31mE (165005) DHT11:: Failed at phase 1[0m
+[1;31mE (165035) DHT11:: Failed at phase 1[0m
+[1;31mE (165075) DHT11:: Failed at phase 1[0m
+[1;31mE (165115) DHT11:: Failed at phase 1[0m
+[1;31mE (165155) DHT11:: Failed at phase 1[0m
+[0;32mI (165295) esp_rmaker_param: Reporting params: {"Sensor Module":{"Voltage":110.35944}}[0m
+[1;31mE (165295) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (165305) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 1":2.47921}}[0m
+[1;31mE (165305) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (165315) esp_rmaker_param: Reporting params: {"Sensor Module":{"Current 2":0.00000}}[0m
+[1;31mE (165325) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (165325) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 1":273.60461}}[0m
+[1;31mE (165335) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
+[0;32mI (165345) esp_rmaker_param: Reporting params: {"Sensor Module":{"Power 2":0.00000}}[0m
+[1;31mE (165345) esp_rmaker_mqtt: Out of MQTT Budget. Dropping publish message.[0m
